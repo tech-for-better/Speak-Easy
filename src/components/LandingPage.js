@@ -13,15 +13,6 @@ export default function LandingPage() {
             make what you want to say, easy.{" "}
           </p>
         </div>
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        {/* <a
-  className="App-link"
-  href="https://reactjs.org"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Learn React
-</a> */}
         <button>Let's speak</button>
       </header>
     </div>
