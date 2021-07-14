@@ -9,7 +9,7 @@ Full-stack Tech For Better project by FAC21 built with Supabase as backend and R
 
 ## Schema [UI](./src/assets/Schema.png)
 
-<img src="./src/assets/Schema.png" width="400px" >
+<img src="./src/assets/Schema.png" width="450px" >
 
 --- 
 
