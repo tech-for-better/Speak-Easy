@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { client } from "../lib/api";
-import image from "../assets/data1.png";
+import binIcon from "../assets/delete-bin.png";
 
 const Board = () => {
   //Query for and render the list of posts
@@ -34,30 +34,39 @@ const Board = () => {
   if (!tiles.length) return <p>No posts.</p>;
 
   const imageStyle = {
-    width: "100px",
-    margin: "5px",
+    width: "12%",
+    margin: "3px",
+  };
+
+  const cardsBoardStyle = {
+    width: "98vw",
+    height: "15vh",
+    border: "solid #259557 1px",
+    margin: "0 auto",
+    borderRadius: "15px",
+  };
+
+  const cardsStyle = {
+    width: "98vw",
+    height: "100vh",
+    margin: "0 auto",
   };
 
   const tilesData = tiles.map((tile) => (
-    <img
-      key={tile.id}
-      src={tile.image}
-      alt={tile.name}
-      style={{ imageStyle }}
-    />
+    <img key={tile.id} src={tile.image} alt={tile.name} style={imageStyle} />
   ));
 
   return (
     <div>
       <div className="header-container">
-        <img src="" alt="bin" />
+        <img src={binIcon} alt="bin" />
         <input type="text" name="search" placeholder="Search..." />
         <button type="submit">🔎</button>
       </div>
-      <div>
+      <div style={cardsBoardStyle}>
         {/* This is where the selected speech content will be displayed. */}
-        {tilesData}
       </div>
+      <div style={cardsStyle}>{tilesData}</div>
     </div>
   );
 };
