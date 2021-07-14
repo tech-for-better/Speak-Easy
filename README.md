@@ -1,11 +1,15 @@
 # Speak-Easy
 
-Tech For Better project by FAC21
+Full-stack Tech For Better project by FAC21 built with Supabase as backend and React as front-end.
 
 # Team
 
-- Mariya
 - Sevda
+- Mariya
+
+## Schema
+
+[UI](./src/assets/Schema.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

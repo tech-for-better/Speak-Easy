@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function LandingPage() {
+const LandingPage = (props) => {
+  console.log(props);
   return (
     <div>
       <header className="App-header">
@@ -13,8 +15,11 @@ export default function LandingPage() {
             make what you want to say, easy.{" "}
           </p>
         </div>
-        <button>Let's speak</button>
+        <button>
+          <Link to="/board">Let's speak</Link>
+        </button>
       </header>
     </div>
   );
-}
+};
+export default LandingPage;

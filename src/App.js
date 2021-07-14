@@ -1,13 +1,20 @@
-import LandingPage from "./components/LandingPage";
-import Board from "./components/Board";
+import LandingPage from "./pages/LandingPage";
+import Board from "./pages/Board";
+import Footer from "./components/Footer";
+import { Switch, Route } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <LandingPage />
-      <Board />
-    </div>
+    <>
+      <Switch>
+        <Route exact path="/" component={LandingPage}></Route>
+        <Route path="/board">
+          <Board />
+        </Route>
+      </Switch>
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
