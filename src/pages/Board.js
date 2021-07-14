@@ -11,6 +11,16 @@ const Board = () => {
     fetchTiles();
   }, []);
 
+  // async function createdTiles() {
+  //   const { data, error } = await client.from("tiles").insert([
+  //     {
+  //       id: 1,
+  //       name: "Hello World",
+  //       created_by: "My first post",
+  //     },
+  //   ]);
+  // }
+
   async function fetchTiles() {
     // Make a request
     let { data, error } = await client.from("tiles").select("*");
@@ -18,7 +28,6 @@ const Board = () => {
     setLoading(false);
 
     console.log("data", data);
-    console.log("tiles", tiles);
   }
 
   if (loading) return <p>Loading...</p>;
@@ -29,6 +38,15 @@ const Board = () => {
     margin: "5px",
   };
 
+  const tilesData = tiles.map((tile) => (
+    <img
+      key={tile.id}
+      src={tile.image}
+      alt={tile.name}
+      style={{ imageStyle }}
+    />
+  ));
+
   return (
     <div>
       <div className="header-container">
@@ -36,10 +54,9 @@ const Board = () => {
         <input type="text" name="search" placeholder="Search..." />
         <button type="submit">🔎</button>
       </div>
-      <div>This is where the selected speech content will be displayed.</div>
-      <div className="img-data">
-        <img src={image} alt="I want data" style={imageStyle} />
-        <img src={image} alt="I want data" style={imageStyle} />
+      <div>
+        {/* This is where the selected speech content will be displayed. */}
+        {tilesData}
       </div>
     </div>
   );
