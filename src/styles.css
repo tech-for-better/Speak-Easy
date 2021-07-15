@@ -44,6 +44,25 @@ body {
   align-items: stretch;
 }
 
+.cards-grid > button {
+  cursor: pointer;
+  border: 1px solid whitesmoke;
+  outline: none;
+}
+
+.output {
+  grid-column: 1/-1;
+  border: 1px solid green;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 3.5rem;
+  width: 90vw;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

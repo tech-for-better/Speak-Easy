@@ -6,6 +6,9 @@ const Board = () => {
   //Query for and render the list of posts
   const [tiles, setTiles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [input, setInput] = useState("");
+  const [prevTile, setPrevTile] = useState("");
+  const [currTile, setCurrTile] = useState("");
 
   useEffect(() => {
     fetchTiles();
@@ -34,7 +37,7 @@ const Board = () => {
   if (!tiles.length) return <p>No posts.</p>;
 
   const imageStyle = {
-    width: "12%",
+    // width: "12%",
     margin: "3px",
   };
 
@@ -53,7 +56,17 @@ const Board = () => {
   };
 
   const tilesData = tiles.map((tile) => (
-    <img key={tile.id} src={tile.image} alt={tile.name} style={imageStyle} />
+    <button
+      key={tile.id}
+      onClick={(e) => {
+        if ((e = tile.id)) {
+          setInput(e);
+          console.log(e);
+        }
+      }}
+    >
+      <img src={tile.image} alt={tile.name} style={imageStyle} />
+    </button>
   ));
 
   return (
@@ -63,10 +76,14 @@ const Board = () => {
         <input type="text" name="search" placeholder="Search..." />
         <button type="submit">🔎</button>
       </div>
-      <div style={cardsBoardStyle}>
+      <div className="cards-grid">
         {/* This is where the selected speech content will be displayed. */}
+        <div className="output">
+          <div className="previous-card"></div>
+          <div className="current-card"></div>
+        </div>
+        {tilesData}
       </div>
-      <div style={cardsStyle}>{tilesData}</div>
     </div>
   );
 };
