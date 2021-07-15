@@ -1,0 +1,54 @@
+:root {
+  --eucalyptus: hsl(147, 60%, 36%);
+  --crail: hsl(16, 50%, 51%);
+  --celery: hsl(88, 54%, 58%);
+  --maverick: hsl(300, 15%, 81%);
+  --fontColor: hsl(0, 0%, 96%);
+}
+
+html,
+body {
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App-header {
+  background-color: var(--maverick);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--crail);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--celery);
+  margin: 0;
+  padding: 10px 0;
+  width: 100%;
+  color: var(--fontColor);
+  font-size: 12px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 1rem 1rem 0;
+  align-items: stretch;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
