@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { client } from "../lib/api";
-import image from "../assets/data1.png";
+//import { client } from "../lib/api";
+import { supabase } from '../supabaseClient'
+//import image from "../assets/data1.png";
 
 const Board = () => {
   //Query for and render the list of posts
@@ -23,7 +24,7 @@ const Board = () => {
 
   async function fetchTiles() {
     // Make a request
-    let { data, error } = await client.from("tiles").select("*");
+    let { data, error } = await supabase.from("tiles").select("*");
     setTiles(data);
     setLoading(false);
 
