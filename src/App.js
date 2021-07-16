@@ -3,9 +3,9 @@ import Board from "./pages/Board";
 import Footer from "./components/Footer";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import './supabase.css'
-//import './index.css'
+import './index.css'
 import { useState, useEffect } from 'react'
-import { supabase } from './supabaseClient'
+import { client } from './lib/api'
 import Auth from './Auth'
 import Account from './Account'
 
@@ -14,9 +14,9 @@ import Account from './Account'
   const [session, setSession] = useState(null)
 
   useEffect(() => {
-    setSession(supabase.auth.session())
+    setSession(client.auth.session())
 
-    supabase.auth.onAuthStateChange((_event, session) => {
+    client.auth.onAuthStateChange((_event, session) => {
       setSession(session)
     })
   }, [])
@@ -45,26 +45,3 @@ export default App;
 
 
 
-// import './index.css'
-// import { useState, useEffect } from 'react'
-// import { supabase } from './supabaseClient'
-// import Auth from './Auth'
-// import Account from './Account'
-
-//export default function Home() {
-  // const [session, setSession] = useState(null)
-
-  // useEffect(() => {
-  //   setSession(supabase.auth.session())
-
-  //   supabase.auth.onAuthStateChange((_event, session) => {
-  //     setSession(session)
-  //   })
-  // }, [])
-
-  //return (
-    // <div className="container" style={{ padding: '50px 0 100px 0' }}>
-    //   {!session ? <Auth /> : <Account key={session.user.id} session={session} />}
-    // </div>
-  //)
-//}

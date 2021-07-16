@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { supabase } from './supabaseClient'
+import { client } from './lib/api'
 import Avatar from './Avatar'
 import { Link } from "react-router-dom";
 
@@ -17,9 +17,9 @@ export default function Account({ session }) {
       
     try {
       setLoading(true)
-      const user = supabase.auth.user()
+      const user = client.auth.user()
 
-      let { data, error, status } = await supabase
+      let { data, error, status } = await client
         .from('profiles')
         .select(`username, website, avatar_url`)
         .eq('id', user.id)
@@ -44,7 +44,7 @@ export default function Account({ session }) {
   async function updateProfile({ username, website, avatar_url }) {
     try {
       setLoading(true)
-      const user = supabase.auth.user()
+      const user = client.auth.user()
 
       const updates = {
         id: user.id,
@@ -54,7 +54,7 @@ export default function Account({ session }) {
         updated_at: new Date(),
       }
 
-      let { error } = await supabase.from('profiles').upsert(updates, {
+      let { error } = await client.from('profiles').upsert(updates, {
         returning: 'minimal', // Don't return the value after inserting
       })
 
@@ -112,7 +112,7 @@ export default function Account({ session }) {
       </div>
 
       <div>
-        <button className="button block" onClick={() => supabase.auth.signOut()}>
+        <button className="button block" onClick={() => client.auth.signOut()}>
           Sign Out
         </button>
         <button>

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-//import { client } from "../lib/api";
-import { supabase } from '../supabaseClient'
-//import image from "../assets/data1.png";
+import { client } from "../lib/api";
 import { Link } from 'react-router-dom'
 
 const Board = () => {
@@ -13,19 +11,9 @@ const Board = () => {
     fetchTiles();
   }, []);
 
-  // async function createdTiles() {
-  //   const { data, error } = await client.from("tiles").insert([
-  //     {
-  //       id: 1,
-  //       name: "Hello World",
-  //       created_by: "My first post",
-  //     },
-  //   ]);
-  // }
-
   async function fetchTiles() {
     // Make a request
-    let { data, error } = await supabase.from("tiles").select("*");
+    let { data, error } = await client.from("tiles").select("*");
     setTiles(data);
     setLoading(false);
 
