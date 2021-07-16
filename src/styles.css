@@ -6,6 +6,10 @@
   --fontColor: hsl(0, 0%, 96%);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   font-family: "Oswald", sans-serif;
