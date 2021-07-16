@@ -2,8 +2,8 @@ import LandingPage from "./pages/LandingPage";
 import Board from "./pages/Board";
 import Footer from "./components/Footer";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
-
-import './index.css'
+import './supabase.css'
+//import './index.css'
 import { useState, useEffect } from 'react'
 import { supabase } from './supabaseClient'
 import Auth from './Auth'
@@ -28,9 +28,11 @@ import Account from './Account'
       {/* <Route exact path="/" component={LandingPage}/> */}
         <Route path="/board" component={Board}/>
         <Route path="/login" component={Auth}/>
+        <Route path="/home" component={LandingPage}/>
      
       {!session ? <Auth /> : 
-      <Account key={session.user.id} session={session}/>}
+    // <LandingPage/>}
+     <Account key={session.user.id} session={session}/>}
       <Footer />
       </Switch>
       </Router>

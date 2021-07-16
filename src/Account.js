@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { supabase } from './supabaseClient'
 import Avatar from './Avatar'
+import { Link } from "react-router-dom";
 
 export default function Account({ session }) {
   const [loading, setLoading] = useState(true)
@@ -13,6 +14,7 @@ export default function Account({ session }) {
   }, [session])
 
   async function getProfile() {
+      
     try {
       setLoading(true)
       const user = supabase.auth.user()
@@ -112,6 +114,11 @@ export default function Account({ session }) {
       <div>
         <button className="button block" onClick={() => supabase.auth.signOut()}>
           Sign Out
+        </button>
+        <button>
+          <Link to="/home">
+            Home
+          </Link>
         </button>
       </div>
     </div>

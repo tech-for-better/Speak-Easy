@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const LandingPage = (props) => {
   console.log(props);
+
   return (
     <div>
       <header className="App-header">
@@ -17,6 +18,11 @@ const LandingPage = (props) => {
         </div>
         <button>
           <Link to="/board">Let's speak</Link>
+        </button>
+        <button>
+          <Link to="/account">
+            Account
+          </Link>
         </button>
       </header>
     </div>

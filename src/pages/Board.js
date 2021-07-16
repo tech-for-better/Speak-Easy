@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 //import { client } from "../lib/api";
 import { supabase } from '../supabaseClient'
 //import image from "../assets/data1.png";
+import { Link } from 'react-router-dom'
 
 const Board = () => {
   //Query for and render the list of posts
@@ -59,6 +60,16 @@ const Board = () => {
         {/* This is where the selected speech content will be displayed. */}
         {tilesData}
       </div>
+      <button>
+          <Link to="/home">
+            Home
+          </Link>
+        </button>
+      <button>
+          <Link to="/account">
+            Account
+          </Link>
+        </button>
     </div>
   );
 };
