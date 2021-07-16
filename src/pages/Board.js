@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { client } from "../lib/api";
 import binIcon from "../assets/delete-bin.png";
+import { Link } from "react-router-dom";
 
 const Board = () => {
   //Query for and render the list of posts
@@ -11,16 +12,6 @@ const Board = () => {
   useEffect(() => {
     fetchTiles();
   }, []);
-
-  // async function createdTiles() {
-  //   const { data, error } = await client.from("tiles").insert([
-  //     {
-  //       id: 1,
-  //       name: "Hello World",
-  //       created_by: "My first post",
-  //     },
-  //   ]);
-  // }
 
   async function fetchTiles() {
     // Make a request
@@ -71,6 +62,12 @@ const Board = () => {
         </div>
         {tilesData}
       </div>
+      <button>
+        <Link to="/home">Home</Link>
+      </button>
+      <button>
+        <Link to="/account">Account</Link>
+      </button>
     </div>
   );
 };
