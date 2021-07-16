@@ -2,7 +2,6 @@ import LandingPage from "./pages/LandingPage";
 import Board from "./pages/Board";
 import Footer from "./components/Footer";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
-import "./supabase.css";
 import "./styles.css";
 import { useState, useEffect } from "react";
 import { client } from "./lib/api";
