@@ -55,12 +55,12 @@ body {
 }
 
 .output {
-  grid-column: 1/-1;
+  /* grid-column: 1/-1; */
   border: 1px solid green;
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
-  flex-direction: column;
+  /* flex-direction: column; */
   padding: 3.5rem;
   width: 90vw;
   margin: 0 auto;

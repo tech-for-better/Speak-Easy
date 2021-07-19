@@ -28,6 +28,8 @@ const Board = () => {
   const imageStyle = {
     // width: "12%",
     margin: "3px",
+    width: '10rem',
+    height: '10rem'
   };
 
   const addToDisplay = (index) => {
@@ -39,8 +41,13 @@ const Board = () => {
       <img src={tile.image} alt={tile.name} style={imageStyle} />
     </button>
   ));
-  const src = display.map((src) => src.image);
-  console.log("display src", src);
+  const sentence = display.map((clickedTile) => 
+    
+  <img src={clickedTile.image} alt={clickedTile.name} style={imageStyle} />
+  
+  );
+  console.log("display src", sentence);
+
   return (
     <div>
       <div className="header-container">
@@ -50,14 +57,15 @@ const Board = () => {
       </div>
       <div className="cards-grid">
         {/* This is where the selected speech content will be displayed. */}
-        <div className="output">
-          <div className="previous-card">
+        <div className="output">{sentence}
+          {/* <div className="previous-card">
             <img src={src[0]} alt="displaying" />
             <img src={src[1]} alt="displaying" />
             <img src={src[2]} alt="displaying" />
             <img src={src[3]} alt="displaying" />
             <img src={src[4]} alt="displaying" />
-          </div>
+          </div> */}
+          
           <div className="current-card"></div>
         </div>
         {tilesData}
