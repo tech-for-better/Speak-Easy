@@ -12,6 +12,7 @@ const Board = () => {
 
   const [value, setValue] = useState('');
   const { speak } = useSpeechSynthesis();
+
   useEffect(() => {
     fetchTiles();
   }, []);
@@ -76,7 +77,6 @@ const Board = () => {
       />
       <button onClick={() => speak({ text: value })}>Speak</button>
     
-          
           <div className="current-card"></div>
         </div>
         {tilesData}
