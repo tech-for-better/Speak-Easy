@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { client } from "../lib/api";
 import binIcon from "../assets/delete-bin.png";
 import { Link } from "react-router-dom";
-import { useSpeechSynthesis } from 'react-speech-kit';
+import { useSpeechSynthesis } from "react-speech-kit";
 import uniqid from "uniqid";
 
 const Board = () => {
@@ -11,7 +11,7 @@ const Board = () => {
   const [loading, setLoading] = useState(true);
   const [display, setDisplay] = useState([]);
 
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
   const { speak } = useSpeechSynthesis();
 
   useEffect(() => {
@@ -33,8 +33,8 @@ const Board = () => {
   const imageStyle = {
     // width: "12%",
     margin: "3px",
-    width: '10rem',
-    height: '10rem'
+    width: "10rem",
+    height: "10rem",
   };
 
   const tilesData = tiles.map((tile) => (
@@ -46,6 +46,7 @@ const Board = () => {
         // console.log(src);
         // setDisplay(display.concat(src));
         setDisplay([...display, tile]);
+        setValue(e.target.value);
       }}
     >
       <img src={tile.image} alt={tile.name} style={imageStyle} />
@@ -68,12 +69,12 @@ const Board = () => {
               <img key={uniqid()} src={tile.image} alt="url" />
             ))}
           </div>
-            {/* text to voice */}
-            <textarea
-        value={value}
-        onChange={(event) => setValue(event.target.value)}
-      />
-      <button onClick={() => speak({ text: value })}>Speak</button>
+          {/* text to voice */}
+          <textarea
+            value={value}
+            onChange={(event) => setValue(event.target.value)}
+          />
+          <button onClick={() => speak({ text: value })}>Speak</button>
           <div className="current-card"></div>
         </div>
         {tilesData}
