@@ -1,28 +1,30 @@
-import { useState } from 'react'
-import { client } from './lib/api'
+import { useState } from "react";
+import { client } from "../lib/api";
 
 export default function Auth() {
-  const [loading, setLoading] = useState(false)
-  const [email, setEmail] = useState('')
+  const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState("");
 
   const handleLogin = async (email) => {
     try {
-      setLoading(true)
-      const { error } = await client.auth.signIn({ email })
-      if (error) throw error
-      alert('Check your email for the login link!')
+      setLoading(true);
+      const { error } = await client.auth.signIn({ email });
+      if (error) throw error;
+      alert("Check your email for the login link!");
     } catch (error) {
-      alert(error.error_description || error.message)
+      alert(error.error_description || error.message);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <div className="row flex flex-center">
       <div className="col-6 form-widget">
-        <h1 className="header">Supabase + React</h1>
-        <p className="description">Sign in via magic link with your email below</p>
+        <h1 className="header">Login Page</h1>
+        <p className="description">
+          Sign in via magic link with your email below
+        </p>
         <div>
           <input
             className="inputField"
@@ -35,10 +37,10 @@ export default function Auth() {
         <div>
           <button
             onClick={(e) => {
-              e.preventDefault()
-              handleLogin(email)
+              e.preventDefault();
+              handleLogin(email);
             }}
-            className={'button block'}
+            className={"button block"}
             disabled={loading}
           >
             {loading ? <span>Loading</span> : <span>Send magic link</span>}
@@ -46,5 +48,5 @@ export default function Auth() {
         </div>
       </div>
     </div>
-  )
+  );
 }
