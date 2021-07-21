@@ -24,7 +24,6 @@ const Board = () => {
     setTiles(data);
     setLoading(false);
 
-    console.log("data", data);
   }
 
   if (loading) return <p>Loading...</p>;
@@ -41,18 +40,18 @@ const Board = () => {
     <button
       key={uniqid()}
       onClick={(e) => {
-        console.log(e.target);
         // const { src } = e.target;
         // console.log(src);
         // setDisplay(display.concat(src));
         setDisplay([...display, tile]);
+        setValue([display], tile.name);
+        console.log(display)
       }}
     >
       <img src={tile.image} alt={tile.name} style={imageStyle} />
     </button>
   ));
 
-  console.log("display", display);
   return (
     <div>
       <div className="header-container">
@@ -69,10 +68,10 @@ const Board = () => {
             ))}
           </div>
             {/* text to voice */}
-            <textarea
+            {/* <textarea
         value={value}
         onChange={(event) => setValue(event.target.value)}
-      />
+      /> */}
       <button onClick={() => speak({ text: value })}>Speak</button>
           <div className="current-card"></div>
         </div>
