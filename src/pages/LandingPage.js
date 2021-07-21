@@ -19,9 +19,6 @@ const LandingPage = (props) => {
         <button>
           <Link to="/board">Let's speak</Link>
         </button>
-        {/* <button>
-          <Link to="/login/account">Account</Link>
-        </button> */}
       </header>
     </div>
   );

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { client } from "../lib/api";
-import binIcon from "../assets/delete-bin.png";
-import { Link } from "react-router-dom";
 import uniqid from "uniqid";
+import Header from "../components/Header";
 
 const Board = () => {
   //Query for and render the list of posts
@@ -49,11 +48,7 @@ const Board = () => {
   console.log("display", display);
   return (
     <div>
-      <div className="header-container">
-        <img src={binIcon} alt="bin" />
-        <input type="text" name="search" placeholder="Search..." />
-        <button type="submit">🔎</button>
-      </div>
+      <Header />
       <div className="cards-grid">
         {/* This is where the selected speech content will be displayed. */}
         <div className="output">
@@ -66,12 +61,6 @@ const Board = () => {
         </div>
         {tilesData}
       </div>
-      <button>
-        <Link to="/">Home</Link>
-      </button>
-      <button>
-        <Link to="/account">Account</Link>
-      </button>
     </div>
   );
 };
