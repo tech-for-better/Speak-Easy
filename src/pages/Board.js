@@ -43,8 +43,9 @@ const Board = () => {
         // console.log(src);
         // setDisplay(display.concat(src));
         setDisplay([...display, tile]);
-        setValue([display], tile.name);
-        console.log(display)
+        let sentence = display.map((word) => word.name)
+        setValue([sentence, tile.name]);
+        console.log(sentence)
       }}
     >
       <img src={tile.image} alt={tile.name} style={imageStyle} />
@@ -59,7 +60,7 @@ const Board = () => {
         <div className="output">
           <div className="previous-card">
             {display.map((tile) => (
-              <img key={uniqid()} src={tile.image} alt="url" />
+              <img key={uniqid()} src={tile.image} alt="url" className='selectedTile'/>
             ))}
           </div>
             {/* text to voice */}
