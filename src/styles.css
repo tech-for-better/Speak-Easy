@@ -31,14 +31,14 @@ body {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
   background-color: var(--celery);
-  margin: 0;
-  padding: 10px 0;
-  width: 100%;
-  color: var(--fontColor);
+  text-align: center;
   font-size: 12px;
+  height: auto;
+  max-width: 100%;
+  padding: 0.5em 0;
+  color: var(--fontColor);
+  font-size: 0.9rem;
 }
 
 .header-container {

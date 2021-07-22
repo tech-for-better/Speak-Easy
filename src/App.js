@@ -20,7 +20,7 @@ const App = () => {
   }, []);
   return (
     <>
-      <div className="container" style={{ padding: "50px 0 100px 0" }}>
+      <div>
         <Router>
           <Switch>
             {/* <Route exact path="/" component={LandingPage}/> */}
