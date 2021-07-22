@@ -1,15 +1,20 @@
 import LandingPage from "./pages/LandingPage";
 import Board from "./pages/Board";
 import Footer from "./components/Footer";
-import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import "./styles.css";
 import { useState, useEffect } from "react";
 import { client } from "./lib/api";
-import Auth from "./Auth";
-import Account from "./Account";
+import Auth from "./contexts/Auth";
+import Account from "./pages/Account";
 
 const App = () => {
-  const [session, setSession] = useState(null);
+  const [session, setSession] = useState(client.auth.session());
 
   useEffect(() => {
     setSession(client.auth.session());
@@ -18,24 +23,30 @@ const App = () => {
       setSession(session);
     });
   }, []);
+  
   return (
     <>
       <div>
         <Router>
           <Switch>
-            {/* <Route exact path="/" component={LandingPage}/> */}
-            <Route path="/board" component={Board} />
-            <Route path="/login" component={Auth} />
-            <Route path="/home" component={LandingPage} />
-
+            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/login" component={Auth} />
             {!session ? (
-              <Auth />
+              <Redirect to="/login" />
             ) : (
-              // <LandingPage/>}
-              <Account key={session.user.id} session={session} />
+              <>
+                <Route exact path="/board" component={Board} />
+                <Route
+                  exact
+                  path="/account"
+                  render={() => (
+                    <Account session={session} setSession={setSession} />
+                  )}
+                />
+              </>
             )}
-            <Footer />
           </Switch>
+          <Footer />
         </Router>
       </div>
     </>
