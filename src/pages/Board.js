@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { client } from "../lib/api";
+import { useSpeechSynthesis } from 'react-speech-kit';
 import uniqid from "uniqid";
 import Header from "../components/Header";
 
@@ -8,6 +9,9 @@ const Board = () => {
   const [tiles, setTiles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [display, setDisplay] = useState([]);
+
+  const [value, setValue] = useState('');
+  const { speak } = useSpeechSynthesis();
 
   useEffect(() => {
     fetchTiles();
@@ -19,7 +23,6 @@ const Board = () => {
     setTiles(data);
     setLoading(false);
 
-    console.log("data", data);
   }
 
   if (loading) return <p>Loading...</p>;
@@ -28,24 +31,27 @@ const Board = () => {
   const imageStyle = {
     // width: "12%",
     margin: "3px",
+    width: '10rem',
+    height: '10rem'
   };
 
   const tilesData = tiles.map((tile) => (
     <button
       key={uniqid()}
       onClick={(e) => {
-        console.log(e.target);
         // const { src } = e.target;
         // console.log(src);
         // setDisplay(display.concat(src));
         setDisplay([...display, tile]);
+        let sentence = display.map((word) => word.name)
+        setValue([sentence, tile.name]);
+        console.log(sentence)
       }}
     >
       <img src={tile.image} alt={tile.name} style={imageStyle} />
     </button>
   ));
 
-  console.log("display", display);
   return (
     <div>
       <Header />
@@ -54,9 +60,15 @@ const Board = () => {
         <div className="output">
           <div className="previous-card">
             {display.map((tile) => (
-              <img key={uniqid()} src={tile.image} alt="url" />
+              <img key={uniqid()} src={tile.image} alt="url" className='selectedTile'/>
             ))}
           </div>
+            {/* text to voice */}
+            {/* <textarea
+        value={value}
+        onChange={(event) => setValue(event.target.value)}
+      /> */}
+      <button onClick={() => speak({ text: value })}>Speak</button>
           <div className="current-card"></div>
         </div>
         {tilesData}

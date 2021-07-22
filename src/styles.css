@@ -55,16 +55,21 @@ body {
 }
 
 .output {
-  grid-column: 1/-1;
+  /* grid-column: 1/-1; */
   border: 1px solid green;
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
-  flex-direction: column;
+  /* flex-direction: column; */
   padding: 3.5rem;
   width: 90vw;
   margin: 0 auto;
   border-radius: 10px;
+}
+
+.selectedTile {
+  height: 10rem;
+  width: 10rem;
 }
 
 @keyframes App-logo-spin {
