@@ -29,16 +29,13 @@ const Board = () => {
   if (!tiles.length) return <p>No posts.</p>;
 
   const buttonStyle = {
-    margin: "0.5rem",
+    margin: "0.1rem",
     width: "10rem",
     height: "10rem",
-    display: "flex",
-    justifyContent: "center",
   };
 
   const tilesData = tiles.map((tile) => (
     <button
-      style={buttonStyle}
       key={uniqid()}
       onClick={(e) => {
         // const { src } = e.target;
@@ -49,6 +46,7 @@ const Board = () => {
         setValue([sentence, tile.name]);
         console.log(sentence);
       }}
+      style={buttonStyle}
     >
       <img src={tile.image} alt={tile.name} />
     </button>
