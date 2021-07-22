@@ -28,15 +28,17 @@ const Board = () => {
   if (loading) return <p>Loading...</p>;
   if (!tiles.length) return <p>No posts.</p>;
 
-  const imageStyle = {
-    // width: "12%",
-    margin: "3px",
+  const buttonStyle = {
+    margin: "0.5rem",
     width: "10rem",
     height: "10rem",
+    display: "flex",
+    justifyContent: "center",
   };
 
   const tilesData = tiles.map((tile) => (
     <button
+      style={buttonStyle}
       key={uniqid()}
       onClick={(e) => {
         // const { src } = e.target;
@@ -48,32 +50,29 @@ const Board = () => {
         console.log(sentence);
       }}
     >
-      <img src={tile.image} alt={tile.name} style={imageStyle} />
+      <img src={tile.image} alt={tile.name} />
     </button>
   ));
 
   return (
-    <div>
+    <main className="cards-container">
       <Header />
-      <div className="cards-grid">
+      <div className="cards">
         {/* This is where the selected speech content will be displayed. */}
-        <div className="output">
-          <div className="previous-card">
-            {display.map((tile) => (
-              <img
-                key={uniqid()}
-                src={tile.image}
-                alt="url"
-                className="selectedTile"
-              />
-            ))}
-          </div>
+        <div className="cards--output">
+          {display.map((tile) => (
+            <img
+              key={uniqid()}
+              src={tile.image}
+              alt="url"
+              className="selectedTile"
+            />
+          ))}
           <button onClick={() => speak({ text: value })}>Speak</button>
-          <div className="current-card"></div>
         </div>
-        {tilesData}
+        <div className="cards--displayed">{tilesData}</div>
       </div>
-    </div>
+    </main>
   );
 };
 

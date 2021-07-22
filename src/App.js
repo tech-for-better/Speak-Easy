@@ -23,7 +23,7 @@ const App = () => {
       setSession(session);
     });
   }, []);
-  
+
   return (
     <>
       <div>
