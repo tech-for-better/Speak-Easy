@@ -120,7 +120,12 @@ export default function Account({ session, setSession }) {
         >
           Sign Out
         </button>
-       
+        <button>
+          <Link to="/board">Let's speak</Link>
+        </button>
+        <button>
+          <Link to="/">Home</Link>
+        </button>
       </div>
     </div>
   );
