@@ -120,7 +120,7 @@ export default function Account({ session, setSession }) {
         >
           Sign Out
         </button>
-
+       
       </div>
     </div>
   );
