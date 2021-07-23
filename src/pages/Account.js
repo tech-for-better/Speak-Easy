@@ -69,7 +69,7 @@ export default function Account({ session, setSession }) {
   console.log(session);
   return (
     <div className="form-widget">
-      <Avatar
+      <Avatar 
         url={avatar_url}
         size={150}
         onUpload={(url) => {
@@ -102,7 +102,7 @@ export default function Account({ session, setSession }) {
 
       <div>
         <button
-          className="button block primary"
+          className="button"
           onClick={() => updateProfile({ username, website, avatar_url })}
           disabled={loading}
         >
@@ -112,7 +112,7 @@ export default function Account({ session, setSession }) {
 
       <div>
         <button
-          className="button block"
+          className="button"
           onClick={() => {
             console.log("clicked");
             client.auth.signOut();
@@ -120,10 +120,10 @@ export default function Account({ session, setSession }) {
         >
           Sign Out
         </button>
-        <button>
+        <button className="button">
           <Link to="/board">Let's speak</Link>
         </button>
-        <button>
+        <button className="button">
           <Link to="/">Home</Link>
         </button>
       </div>

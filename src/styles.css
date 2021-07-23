@@ -206,7 +206,63 @@ input[type="text"]:focus {
 
 }
 
+.form-widget {
+  background-color: var(--maverick);
+  color: var(--crail);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  gap: 20px;
+}
 
+label {
+  display: block;
+  margin: 5px 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+input {
+  width: 100%;
+  color: var(--crail);
+  background-color: var(--maverick);
+  border: 1px solid var(--eucalyptus);
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 0.9rem;
+}
+
+/* .form-widget > .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #444444;
+  text-transform: none !important;
+  transition: all 0.2s ease;
+} */
+
+
+.button {
+  display: inline-block;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  color: var(--crail);
+  background-color: var(--maverick);
+  border: 1px solid var(--eucalyptus);
+  border-radius: 0.2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.button * {
+  text-decoration: none;
+  color: var(--crail);
+}
 
 @keyframes App-logo-spin {
   from {
