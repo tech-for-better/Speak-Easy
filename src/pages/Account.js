@@ -1,6 +1,7 @@
-import { useState, useEffect, Link } from "react";
+import { useState, useEffect } from "react";
 import { client } from "../lib/api";
 import Avatar from "./Avatar";
+import { Link } from "react-router-dom";
 
 export default function Account({ session, setSession }) {
   const [loading, setLoading] = useState(true);
@@ -67,8 +68,39 @@ export default function Account({ session, setSession }) {
   }
   console.log(session);
   return (
-    <div className="form-widget">
-      <Avatar
+    <main className='account-main'>
+   
+      <div className='account-header'>
+        <div>
+          <button className="button">
+              <Link to="/board">Let's speak</Link>
+            </button>
+            <button className="button">
+              <Link to="/">Home</Link>
+            </button>
+        </div>
+        <div>
+          <button
+            className='button'
+            onClick={() => updateProfile({ username, website, avatar_url })}
+            disabled={loading}
+          >
+            {loading ? "Loading ..." : "Update"}
+          </button>
+        
+          <button
+            className="button"
+            onClick={() => {
+              console.log("clicked");
+              client.auth.signOut();
+            }}
+          >
+            Sign Out
+          </button>
+        </div>
+      </div>
+      <div className="form-widget">
+      <Avatar 
         url={avatar_url}
         size={150}
         onUpload={(url) => {
@@ -77,12 +109,12 @@ export default function Account({ session, setSession }) {
         }}
       />
       <div>
-        <label htmlFor="email">Email</label>
-        <input id="email" type="text" value={session.user.email} disabled />
+        <label htmlFor="email" className='account-label'>Email</label>
+        <input className='account-input' id="email" type="text" value={session.user.email} disabled />
       </div>
       <div>
-        <label htmlFor="username">Name</label>
-        <input
+        <label htmlFor="username" className='account-label'>Name</label>
+        <input className='account-input' 
           id="username"
           type="text"
           value={username || ""}
@@ -90,42 +122,15 @@ export default function Account({ session, setSession }) {
         />
       </div>
       <div>
-        <label htmlFor="website">Website</label>
-        <input
+        <label htmlFor="website" className='account-label'>Website</label>
+        <input className='account-input' 
           id="website"
           type="website"
           value={website || ""}
           onChange={(e) => setWebsite(e.target.value)}
         />
       </div>
-
-      <div>
-        <button
-          className="button block primary"
-          onClick={() => updateProfile({ username, website, avatar_url })}
-          disabled={loading}
-        >
-          {loading ? "Loading ..." : "Update"}
-        </button>
-      </div>
-
-      <div>
-        <button
-          className="button block"
-          onClick={() => {
-            console.log("clicked");
-            client.auth.signOut();
-          }}
-        >
-          Sign Out
-        </button>
-        <button>
-          <Link to="/board">Let's speak</Link>
-        </button>
-        <button>
-          <Link to="/">Home</Link>
-        </button>
-      </div>
     </div>
+    </main>
   );
 }
