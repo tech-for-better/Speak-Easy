@@ -43,7 +43,7 @@ const Board = () => {
 
   const tilesData = tiles.map((tile) => (
     <button
-      key={uniqid()}
+      key={tiles.id}
       onClick={(e) => {
         
         setDisplay([...display, tile]);
@@ -70,7 +70,7 @@ const Board = () => {
         <div className="cards--output">
           {display.map((tile) => (
             <img
-              key={uniqid()}
+              key={tiles.id}
               src={tile.image}
               alt="url"
               className="selectedTile"

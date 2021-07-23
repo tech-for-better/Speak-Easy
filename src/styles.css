@@ -206,26 +206,39 @@ input[type="text"]:focus {
 
 }
 
-.form-widget {
+.account-main {
   background-color: var(--maverick);
   color: var(--crail);
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   gap: 20px;
 }
 
-label {
+.account-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+
+}
+
+.form-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.account-label {
   display: block;
   margin: 5px 0;
   font-size: 0.8rem;
   text-transform: uppercase;
 }
 
-input {
+.account-input {
   width: 100%;
   color: var(--crail);
   background-color: var(--maverick);
@@ -235,20 +248,11 @@ input {
   font-size: 0.9rem;
 }
 
-/* .form-widget > .button {
+.button {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none;
-  background-color: #444444;
-  text-transform: none !important;
-  transition: all 0.2s ease;
-} */
-
-
-.button {
-  display: inline-block;
-  text-align: center;
+  width: 8rem;
   font-size: 0.9rem;
   padding: 0.5rem 1rem;
   color: var(--crail);
