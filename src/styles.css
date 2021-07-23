@@ -225,11 +225,11 @@ input[type="text"]:focus {
 
 }
 
-.form-widget {
+/* .form-widget {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 .account-label {
   display: block;
@@ -253,13 +253,13 @@ input[type="text"]:focus {
   align-items: center;
   justify-content: center;
   width: 8rem;
-  font-size: 0.9rem;
   padding: 0.5rem 1rem;
   color: var(--crail);
   background-color: var(--maverick);
   border: 1px solid var(--eucalyptus);
   border-radius: 0.2rem;
   cursor: pointer;
+  font-size: 0.9rem;
   text-transform: uppercase;
 }
 
@@ -267,6 +267,34 @@ input[type="text"]:focus {
   text-decoration: none;
   color: var(--crail);
 }
+
+.avatar {
+  border: 1px solid var(--eucalyptus);
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 100%;
+}
+.avatar.image {
+  object-fit: cover;
+}
+.avatar.no-image {
+  background-color: var(--maverick);
+  border: 1px solid var(--eucalyptus);
+  border-radius: 5px;
+}
+
+.upload-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--eucalyptus);
+  border-radius: 0.2rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
 
 @keyframes App-logo-spin {
   from {
