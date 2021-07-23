@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { client } from "../lib/api";
-import { useSpeechSynthesis } from 'react-speech-kit';
+import { useSpeechSynthesis } from "react-speech-kit";
 import uniqid from "uniqid";
 import Header from "../components/Header";
 
@@ -10,9 +10,7 @@ const Board = () => {
   const [loading, setLoading] = useState(true);
   const [display, setDisplay] = useState([]);
 
-  // const [noah, setNoah] = useState([])
-
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
   const { speak } = useSpeechSynthesis();
 
   useEffect(() => {
@@ -24,17 +22,16 @@ const Board = () => {
     let { data, error } = await client.from("tiles").select("*");
     setTiles(data);
     setLoading(false);
-
+    console.log("data", data);
   }
 
   if (loading) return <p>Loading...</p>;
   if (!tiles.length) return <p>No posts.</p>;
 
-  const imageStyle = {
-    // width: "12%",
-    margin: "3px",
-    width: '10rem',
-    height: '10rem'
+  const buttonStyle = {
+    margin: "0.1rem",
+    width: "10rem",
+    height: "10rem",
   };
 
   const noah = tiles.filter((noahs) => {
@@ -59,30 +56,31 @@ const Board = () => {
         let sentence = display.map((word) => word.name)
         setValue([sentence, tile.name]);
       }}
+      style={buttonStyle}
     >
-      <img src={tile.image} alt={tile.name} style={imageStyle} />
+      <img src={tile.image} alt={tile.name} />
     </button>
   ));
 
   return (
-    <div>
+    <main className="cards-container">
       <Header />
-      <div className="cards-grid">
+      <div className="cards">
         {/* This is where the selected speech content will be displayed. */}
-        <div className="output">
-          <div className="previous-card">
-            {display.map((tile) => (
-              <img key={uniqid()} src={tile.image} alt="url" className='selectedTile'/>
-            ))}
-          </div>
-            {/* text to voice */}
-      <button onClick={() => speak({ text: value })}>Speak</button>
-          <div className="current-card"></div>
+        <div className="cards--output">
+          {display.map((tile) => (
+            <img
+              key={uniqid()}
+              src={tile.image}
+              alt="url"
+              className="selectedTile"
+            />
+          ))}
+          <button onClick={() => speak({ text: value })}>Speak</button>
         </div>
-        {/* {noah} */}
-        {tilesData}
+        <div className="cards--displayed">{tilesData}</div>
       </div>
-    </div>
+    </main>
   );
 };
 

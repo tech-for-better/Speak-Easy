@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Link } from "react";
 import { client } from "../lib/api";
 import Avatar from "./Avatar";
-import { Link } from "react-router-dom";
 
 export default function Account({ session, setSession }) {
   const [loading, setLoading] = useState(true);
