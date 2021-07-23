@@ -23,7 +23,7 @@ body {
 }
 
 .landingPage {
-  position: relative;
+  /* position: relative; */
   background-color: var(--maverick);
   min-height: 100vh;
   min-width: 100vw;
@@ -36,7 +36,8 @@ body {
 }
 
 .landingPage--container {
-  width: 80%;
+  position: relative;
+  width: 80vw;
   border: 0.1rem solid var(--eucalyptus);
   padding: 4rem;
   border-radius: 1rem;
@@ -46,12 +47,13 @@ body {
 .landingPage > h1 {
   position: absolute;
   top: 4rem;
-  left: 9rem;
+  left: 10rem;
 }
 
 .landingPage > button {
   position: absolute;
-  left: 74rem;
+  /* left: 74rem; */
+  right: 10rem;
   bottom: 9rem;
   font-size: 1.1rem;
   font-weight: bolder;
@@ -65,6 +67,9 @@ body {
   color: var(--fontColor);
 }
 .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
   background-color: var(--celery);
   text-align: center;
   font-size: 12px;
@@ -200,6 +205,8 @@ input[type="text"]:focus {
 .header{
 
 }
+
+
 
 @keyframes App-logo-spin {
   from {
