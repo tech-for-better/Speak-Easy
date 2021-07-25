@@ -19,7 +19,7 @@ export default function Auth() {
   };
 
   return (
-    <div className="flex-center">
+    <div className=" account-login--main">
       <div className="form-widget">
         <h1 className="header">Login Page</h1>
         <p className="description">
@@ -27,7 +27,7 @@ export default function Auth() {
         </p>
         <div>
           <input
-            className="inputField"
+            className="account-login--input"
             type="email"
             placeholder="Your email"
             value={email}
@@ -40,7 +40,7 @@ export default function Auth() {
               e.preventDefault();
               handleLogin(email);
             }}
-            className={"button block"}
+            className={"button"}
             disabled={loading}
           >
             {loading ? <span>Loading</span> : <span>Send magic link</span>}

@@ -64,7 +64,7 @@ const Board = () => {
 
   return (
     <main className="cards-container">
-      <Header />
+      <Header searchValue = {tilesData.name} />
       <div className="cards">
         {/* This is where the selected speech content will be displayed. */}
         <div className="cards--output">

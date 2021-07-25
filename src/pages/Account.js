@@ -68,15 +68,15 @@ export default function Account({ session, setSession }) {
   }
   console.log(session);
   return (
-    <main className='account-main'>
+    <main className='account-login--main'>
    
       <div className='account-header'>
         <div>
+        <button className="button">
+              <Link to="/">Home</Link>
+            </button>
           <button className="button">
               <Link to="/board">Let's speak</Link>
-            </button>
-            <button className="button">
-              <Link to="/">Home</Link>
             </button>
         </div>
         <div>
@@ -110,11 +110,11 @@ export default function Account({ session, setSession }) {
       />
       <div>
         <label htmlFor="email" className='account-label'>Email</label>
-        <input className='account-input' id="email" type="text" value={session.user.email} disabled />
+        <input className='account-login--input' id="email" type="text" value={session.user.email} disabled />
       </div>
       <div>
         <label htmlFor="username" className='account-label'>Name</label>
-        <input className='account-input' 
+        <input className='account-login--input' 
           id="username"
           type="text"
           value={username || ""}
@@ -123,7 +123,7 @@ export default function Account({ session, setSession }) {
       </div>
       <div>
         <label htmlFor="website" className='account-label'>Website</label>
-        <input className='account-input' 
+        <input className='account-login--input' 
           id="website"
           type="website"
           value={website || ""}

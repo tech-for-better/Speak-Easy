@@ -22,6 +22,19 @@ body {
   overflow-x: hidden;
 }
 
+/* .row { remove from Auth.js div
+  position: relative;
+  width: 100%;
+} */
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
 .landingPage {
   position: relative;
   background-color: var(--maverick);
@@ -191,7 +204,7 @@ input[type="text"]:focus {
 
 }
 
-.account-main {
+.account-login--main {
   background-color: var(--maverick);
   color: var(--crail);
   height: 100vh;
@@ -223,7 +236,7 @@ input[type="text"]:focus {
   text-transform: uppercase;
 }
 
-.account-input {
+.account-login--input {
   width: 100%;
   color: var(--crail);
   background-color: var(--maverick);
