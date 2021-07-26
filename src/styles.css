@@ -204,17 +204,25 @@ input[type="text"]:focus {
   gap: 20px;
 }
 
-.header {
+.form-widget.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.login-container {
+
 }
 
 .account-login--main {
   background-color: var(--maverick);
   color: var(--crail);
   height: 100vh;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   gap: 20px;
 }
@@ -224,12 +232,6 @@ input[type="text"]:focus {
   justify-content: space-between;
   width: 100vw;
 }
-
-/* .form-widget {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
 
 .account-label {
   display: block;
