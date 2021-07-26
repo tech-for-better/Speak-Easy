@@ -100,11 +100,7 @@ const Board = () => {
         <div className="cards--output">
           {display.map((tile) => (
             <img
-<<<<<<< HEAD
               key={tile.id}
-=======
-              key={tiles.id}
->>>>>>> 91f5f6f0697ec995e746cd6e099a4a68c1daecd1
               src={tile.image}
               alt="url"
               className="selectedTile"
