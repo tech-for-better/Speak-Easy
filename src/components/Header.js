@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import binIcon from "../assets/delete-bin.png";
 import { Link } from "react-router-dom";
+import binIcon from "../assets/delete-bin.png";
+import homeIcon from "../assets/home.png";
+import accountIcon from "../assets/account.png";
 
 export default function Header({ tiles, setTiles }) {
   const [search, setSearch] = useState("");
@@ -30,17 +32,21 @@ export default function Header({ tiles, setTiles }) {
         <div className="header-container--left">
           <button>
             <Link to="/">
-              <i className="ri-home-8-line" style={{ width: "100%" }}></i>
+              <img src={homeIcon} alt="" style={{ width: "100%" }} />
             </Link>
           </button>
           <button>
             <Link to="/account">
-              <i className="ri-account-pin-box-line"></i>
+              <img src={accountIcon} alt="" style={{ width: "100%" }} />
             </Link>
           </button>
         </div>
         <div className="header-container--right">
-          <img src={binIcon} alt="bin" />
+          <img
+            src={binIcon}
+            alt="bin"
+            style={{ width: "2.5rem", height: "100%" }}
+          />
           <input
             type="text"
             name="search"
