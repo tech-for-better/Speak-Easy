@@ -68,7 +68,7 @@ export default function Account({ session, setSession }) {
   }
   console.log(session);
   return (
-    <main className='account-login--main'>
+    <main className=' flex account-login--main'>
    
       <div className='account-header'>
         <div>

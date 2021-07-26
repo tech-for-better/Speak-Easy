@@ -37,7 +37,7 @@ body {
 
 .landingPage {
   position: relative;
-  background-image: url('../src/assets/landing-page4.jpg');
+  background-image: url('../src/assets/landing-page1.jpg');
   background-size: cover;
   /* background-color: var(--maverick); */
   min-height: 100vh;
@@ -192,10 +192,6 @@ input[type="text"]:focus {
 .selectedTile {
   height: 10rem;
   width: 10rem;
-}
-
-.flex-center {
-  justify-content: center;
 }
 
 .form-widget {
