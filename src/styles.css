@@ -37,7 +37,9 @@ body {
 
 .landingPage {
   position: relative;
-  background-color: var(--maverick);
+  background-image: url('../src/assets/landing-page2.jpg');
+  background-size: cover;
+  /* background-color: var(--maverick); */
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
@@ -145,7 +147,7 @@ body {
 }
 
 input[type="text"] {
-  width: 20rem;
+  max-width: 20rem;
 }
 
 input[placeholder] {
