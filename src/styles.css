@@ -105,19 +105,21 @@ body {
 
 .header-container--right {
   display: flex;
+  width: 50%;
+  height: auto;
 }
 
 .header-container--left {
   display: flex;
-  gap: 0.5rem;
+  align-items: baseline;
+  width: 28%;
 }
 
 .header-container--left > button {
   width: 3.5rem;
-  font-size: 1.1rem;
+  height: 2rem;
   background-color: transparent;
-  border-radius: 0.2rem;
-  border: 0.1rem solid var(--eucalyptus);
+  border: 0.1rem solid transparent;
 }
 
 .header-container--left > button * {
@@ -134,7 +136,8 @@ body {
 }
 
 input[type="text"] {
-  max-width: 20rem;
+  width: 100%;
+  height: auto;
 }
 
 input[placeholder] {
@@ -189,9 +192,6 @@ input[type="text"]:focus {
   gap: 20px;
 }
 
-.header {
-}
-
 .account-main {
   background-color: var(--maverick);
   color: var(--crail);
@@ -199,7 +199,6 @@ input[type="text"]:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   gap: 20px;
 }
@@ -209,12 +208,6 @@ input[type="text"]:focus {
   justify-content: space-between;
   width: 100vw;
 }
-
-/* .form-widget {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
 
 .account-label {
   display: block;
@@ -233,24 +226,33 @@ input[type="text"]:focus {
   font-size: 0.9rem;
 }
 
-.button {
+.button__letsSpeak,
+.button__home,
+.button__update,
+.button__signOut {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 8rem;
-  padding: 0.5rem 1rem;
   color: var(--crail);
   background-color: var(--maverick);
-  border: 1px solid var(--eucalyptus);
-  border-radius: 0.2rem;
+  border-color: transparent;
   cursor: pointer;
   font-size: 0.9rem;
   text-transform: uppercase;
 }
 
-.button * {
+.button__letsSpeak,
+.button__home,
+* {
   text-decoration: none;
   color: var(--crail);
+}
+
+.header__buttons--left {
+  /* Account */
+  display: flex;
+  width: 15%;
+  height: auto;
 }
 
 .avatar {

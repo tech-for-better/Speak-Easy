@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { client } from "../lib/api";
-import Avatar from "./Avatar";
 import { Link } from "react-router-dom";
+import Avatar from "./Avatar";
+import accountIcon from "../assets/account.png";
+import homeIcon from "../assets/home.png";
 
 export default function Account({ session, setSession }) {
   const [loading, setLoading] = useState(true);
@@ -70,17 +72,29 @@ export default function Account({ session, setSession }) {
   return (
     <main className="account-main">
       <div className="account-header">
-        <div>
-          <button className="button">
-            <Link to="/board">Let's speak</Link>
+        <div className="header__buttons--left">
+          <button className="button__letsSpeak">
+            <Link to="/board">
+              <img
+                src={accountIcon}
+                alt="profile avatar icon"
+                style={{ width: "50%", height: "auto" }}
+              />
+            </Link>
           </button>
-          <button className="button">
-            <Link to="/">Home</Link>
+          <button className="button__home">
+            <Link to="/">
+              <img
+                src={homeIcon}
+                alt="home icon"
+                style={{ width: "50%", height: "auto" }}
+              />
+            </Link>
           </button>
         </div>
         <div>
           <button
-            className="button"
+            className="button__update"
             onClick={() => updateProfile({ username, website, avatar_url })}
             disabled={loading}
           >
@@ -88,7 +102,7 @@ export default function Account({ session, setSession }) {
           </button>
 
           <button
-            className="button"
+            className="button__signOut"
             onClick={() => {
               console.log("clicked");
               client.auth.signOut();
