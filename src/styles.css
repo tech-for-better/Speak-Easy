@@ -2,7 +2,6 @@
   --eucalyptus: hsl(147, 60%, 36%);
   --crail: hsl(16, 50%, 51%);
   --celery: hsl(88, 54%, 58%);
-  --maverick: hsl(300, 15%, 81%);
   --fontColor: hsl(0, 0%, 96%);
 }
 
@@ -24,7 +23,8 @@ body {
 
 .landingPage {
   position: relative;
-  background-color: var(--maverick);
+  background-image: url("../src/assets/LandingPage-background.jpg");
+  background-size: cover;
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
@@ -40,7 +40,7 @@ body {
   border: 0.1rem solid var(--eucalyptus);
   padding: 4rem;
   border-radius: 1rem;
-  background-color: hsl(0, 0%, 96%, 0.4);
+  background-color: hsl(0, 0%, 96%, 0.85);
 }
 
 .landingPage > h1 {
@@ -53,11 +53,13 @@ body {
   position: absolute;
   right: 9rem;
   bottom: 9rem;
-  font-size: 1.1rem;
+  font-size: 2rem;
   font-weight: bolder;
   background-color: var(--eucalyptus);
   border-radius: 0.2rem;
   border: 0.1rem solid var(--eucalyptus);
+  padding: 0.8rem;
+  text-transform: uppercase;
 }
 
 .landingPage > button * {
@@ -70,6 +72,7 @@ body {
   max-width: 100vw;
   display: flex;
   flex-direction: column;
+  background-color: var(--fontColor);
 }
 
 .cards--displayed {
@@ -115,7 +118,7 @@ body {
 }
 
 .header-container--left > button {
-  width: 3.5rem;
+  width: 4.5rem;
   height: auto;
   background-color: transparent;
   border: 0.1rem solid transparent;
@@ -140,10 +143,12 @@ input[type="text"] {
 }
 
 input[placeholder] {
-  color: var(--eucalyptus) !important;
+  background-color: transparent;
+  border: 1px solid var(--eucalyptus);
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="website"]:focus {
   outline-color: var(--crail);
 }
 
@@ -201,7 +206,7 @@ input[type="text"]:focus {
 }
 
 .account-main {
-  background-color: var(--maverick);
+  background-color: var(--fontColor);
   color: var(--crail);
   height: 100vh;
   display: flex;
@@ -220,7 +225,7 @@ input[type="text"]:focus {
 .account-input {
   width: 100%;
   color: var(--crail);
-  background-color: var(--maverick);
+  background-color: var(--fontColor);
   border: 1px solid var(--eucalyptus);
   border-radius: 0.2rem;
   padding: 8px;
@@ -234,7 +239,7 @@ input[type="text"]:focus {
   align-items: center;
   justify-content: center;
   color: var(--crail);
-  background-color: var(--maverick);
+  background-color: var(--fontColor);
   border-color: transparent;
   cursor: pointer;
   font-size: 1rem;
@@ -244,7 +249,7 @@ input[type="text"]:focus {
 .button__signOut,
 .button__update {
   color: var(--crail);
-  background-color: var(--maverick);
+  background-color: var(--fontColor);
   border: 1px solid var(--eucalyptus);
   border-radius: 0.2rem;
   cursor: pointer;
@@ -291,7 +296,7 @@ input[type="text"]:focus {
   object-fit: cover;
 }
 .avatar.no-image {
-  background-color: var(--maverick);
+  background-color: var(--fontColor);
   border: 1px solid var(--eucalyptus);
   border-radius: 0.2rem;
 }
