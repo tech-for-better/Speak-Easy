@@ -93,10 +93,9 @@ body {
 .header-container {
   display: flex;
   justify-content: space-between;
-  /* padding: 1rem 4.5rem; */
-  /* border: 1rem solid red; */
   width: 97%;
   margin: 2rem auto;
+  height: 2rem;
 }
 
 .header-container > * {
@@ -111,13 +110,13 @@ body {
 
 .header-container--left {
   display: flex;
-  align-items: baseline;
-  width: 28%;
+  align-items: center;
+  align-content: stretch;
 }
 
 .header-container--left > button {
   width: 3.5rem;
-  height: 2rem;
+  height: auto;
   background-color: transparent;
   border: 0.1rem solid transparent;
 }
@@ -172,7 +171,7 @@ input[type="text"]:focus {
   padding: 1.5rem;
   width: 97vw;
   margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 0.4rem;
   height: 12rem;
   gap: 0.5rem;
 }
@@ -221,15 +220,14 @@ input[type="text"]:focus {
   color: var(--crail);
   background-color: var(--maverick);
   border: 1px solid var(--eucalyptus);
-  border-radius: 5px;
+  border-radius: 0.2rem;
   padding: 8px;
   font-size: 0.9rem;
 }
 
 .button__letsSpeak,
 .button__home,
-.button__update,
-.button__signOut {
+.button__update {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -237,8 +235,24 @@ input[type="text"]:focus {
   background-color: var(--maverick);
   border-color: transparent;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-transform: uppercase;
+}
+
+.button__signOut,
+.button__update {
+  color: var(--crail);
+  background-color: var(--maverick);
+  border: 1px solid var(--eucalyptus);
+  border-radius: 0.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+}
+
+.button__update {
+  margin: 2rem;
 }
 
 .button__letsSpeak,
@@ -250,14 +264,24 @@ input[type="text"]:focus {
 
 .header__buttons--left {
   /* Account */
-  display: flex;
-  width: 15%;
   height: auto;
+  display: flex;
+  align-items: center;
+  max-width: 11%;
+  padding: 1rem;
+}
+
+.header__buttons--right {
+  /* Account */
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
 }
 
 .avatar {
   border: 1px solid var(--eucalyptus);
-  border-radius: 5px;
+  border-radius: 0.2rem;
   overflow: hidden;
   max-width: 100%;
 }
@@ -267,7 +291,7 @@ input[type="text"]:focus {
 .avatar.no-image {
   background-color: var(--maverick);
   border: 1px solid var(--eucalyptus);
-  border-radius: 5px;
+  border-radius: 0.2rem;
 }
 
 .upload-button {
