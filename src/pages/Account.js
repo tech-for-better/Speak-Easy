@@ -113,10 +113,8 @@ export default function Account({ session, setSession }) {
             updateProfile({ username, website, avatar_url: url });
           }}
         />
-        <div>
-          <label htmlFor="email" className="account-label">
-            Email
-          </label>
+        <div className="form__containers">
+          <label htmlFor="email">Email</label>
           <input
             className="account-input"
             id="email"
@@ -125,10 +123,8 @@ export default function Account({ session, setSession }) {
             disabled
           />
         </div>
-        <div>
-          <label htmlFor="username" className="account-label">
-            Name
-          </label>
+        <div className="form__containers">
+          <label htmlFor="username">Name</label>
           <input
             className="account-input"
             id="username"
@@ -137,10 +133,8 @@ export default function Account({ session, setSession }) {
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
-        <div>
-          <label htmlFor="website" className="account-label">
-            Website
-          </label>
+        <div className="form__containers">
+          <label htmlFor="website">Website</label>
           <input
             className="account-input"
             id="website"

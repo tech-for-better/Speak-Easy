@@ -188,7 +188,16 @@ input[type="text"]:focus {
 .form-widget {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.form__containers {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin: 0.5rem;
 }
 
 .account-main {
@@ -206,13 +215,6 @@ input[type="text"]:focus {
   display: flex;
   justify-content: space-between;
   width: 100vw;
-}
-
-.account-label {
-  display: block;
-  margin: 5px 0;
-  font-size: 0.8rem;
-  text-transform: uppercase;
 }
 
 .account-input {
@@ -267,7 +269,7 @@ input[type="text"]:focus {
   height: auto;
   display: flex;
   align-items: center;
-  max-width: 11%;
+  max-width: 14%;
   padding: 1rem;
 }
 
