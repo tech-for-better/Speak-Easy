@@ -1,4 +1,5 @@
-import { useState, useEffect, Link } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { client } from "../lib/api";
 import Avatar from "./Avatar";
 

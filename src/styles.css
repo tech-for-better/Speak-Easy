@@ -104,7 +104,7 @@ body {
   /* padding: 1rem 4.5rem; */
   /* border: 1rem solid red; */
   width: 97%;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
 .header-container > * {
@@ -197,8 +197,7 @@ input[type="text"]:focus {
   gap: 20px;
 }
 
-.header{
-
+.header {
 }
 
 @keyframes App-logo-spin {
