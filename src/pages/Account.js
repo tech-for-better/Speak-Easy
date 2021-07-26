@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { client } from "../lib/api";
-import Avatar from "./Avatar";
 import { Link } from "react-router-dom";
+import Avatar from "./Avatar";
+import boardIcon from "../assets/board.png";
+import homeIcon from "../assets/home.png";
 
 export default function Account({ session, setSession }) {
   const [loading, setLoading] = useState(true);
@@ -68,28 +70,31 @@ export default function Account({ session, setSession }) {
   }
   console.log(session);
   return (
-    <main className=' flex account-login--main'>
-   
-      <div className='account-header'>
-        <div>
-        <button className="button">
-              <Link to="/">Home</Link>
-            </button>
-          <button className="button">
-              <Link to="/board">Let's speak</Link>
-            </button>
-        </div>
-        <div>
-          <button
-            className="button"
-            onClick={() => updateProfile({ username, website, avatar_url })}
-            disabled={loading}
-          >
-            {loading ? "Loading ..." : "Update"}
+    <main className="account-main">
+      <div className="account-header">
+        <div className="header__buttons--left">
+          <button className="button__home">
+            <Link to="/">
+              <img
+                src={homeIcon}
+                alt="home icon"
+                style={{ width: "100%", height: "auto" }}
+              />
+            </Link>
           </button>
-
+          <button className="button__letsSpeak">
+            <Link to="/board">
+              <img
+                src={boardIcon}
+                alt="profile avatar icon"
+                style={{ width: "100%", height: "auto" }}
+              />
+            </Link>
+          </button>
+        </div>
+        <div class="header__buttons--right">
           <button
-            className="button"
+            className="button__signOut"
             onClick={() => {
               console.log("clicked");
               client.auth.signOut();
@@ -100,36 +105,51 @@ export default function Account({ session, setSession }) {
         </div>
       </div>
       <div className="form-widget">
-      <Avatar 
-        url={avatar_url}
-        size={150}
-        onUpload={(url) => {
-          setAvatarUrl(url);
-          updateProfile({ username, website, avatar_url: url });
-        }}
-      />
-      <div>
-        <label htmlFor="email" className='account-label'>Email</label>
-        <input className='account-login--input' id="email" type="text" value={session.user.email} disabled />
-      </div>
-      <div>
-        <label htmlFor="username" className='account-label'>Name</label>
-        <input className='account-login--input' 
-          id="username"
-          type="text"
-          value={username || ""}
-          onChange={(e) => setUsername(e.target.value)}
+        <Avatar
+          url={avatar_url}
+          size={150}
+          onUpload={(url) => {
+            setAvatarUrl(url);
+            updateProfile({ username, website, avatar_url: url });
+          }}
         />
-      </div>
-      <div>
-        <label htmlFor="website" className='account-label'>Website</label>
-        <input className='account-login--input' 
-          id="website"
-          type="website"
-          value={website || ""}
-          onChange={(e) => setWebsite(e.target.value)}
-        />
-      </div>
+        <div className="form__containers">
+          <label htmlFor="email">Email</label>
+          <input
+            className="account-input"
+            id="email"
+            type="text"
+            value={session.user.email}
+            disabled
+          />
+        </div>
+        <div className="form__containers">
+          <label htmlFor="username">Name</label>
+          <input
+            className="account-input"
+            id="username"
+            type="text"
+            value={username || ""}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
+        <div className="form__containers">
+          <label htmlFor="website">Website</label>
+          <input
+            className="account-input"
+            id="website"
+            type="website"
+            value={website || ""}
+            onChange={(e) => setWebsite(e.target.value)}
+          />
+        </div>
+        <button
+          className="button__update"
+          onClick={() => updateProfile({ username, website, avatar_url })}
+          disabled={loading}
+        >
+          {loading ? "Loading ..." : "Update"}
+        </button>
       </div>
     </main>
   );
