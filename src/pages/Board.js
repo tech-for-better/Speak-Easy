@@ -102,7 +102,7 @@ const Board = () => {
             <img
               key={tile.id}
               src={tile.image}
-              alt="url"
+              alt="card url"
               className="selectedTile"
             />
           ))}

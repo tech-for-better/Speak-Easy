@@ -296,7 +296,7 @@ input[type="email"]:focus {
   height: auto;
   display: flex;
   align-items: center;
-  max-width: 14%;
+  max-width: 13%;
 }
 
 .header__buttons--right {
