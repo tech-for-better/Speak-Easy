@@ -68,6 +68,8 @@ body {
 .cards-container {
   min-height: 100vh;
   max-width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .cards--displayed {
@@ -132,7 +134,7 @@ body {
 }
 
 input[type="text"] {
-  width: 20rem;
+  max-width: 20rem;
 }
 
 input[placeholder] {
@@ -206,7 +208,6 @@ input[type="text"]:focus {
   display: flex;
   justify-content: space-between;
   width: 100vw;
-
 }
 
 /* .form-widget {
@@ -294,8 +295,7 @@ input[type="text"]:focus {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1023px) { 
-
+@media screen and (max-width: 1023px) {
   .landingPage--container {
     padding: 1rem;
   }
@@ -304,15 +304,14 @@ input[type="text"]:focus {
     top: 0.8rem;
     left: 4rem;
   }
-  
+
   .landingPage > button {
     right: 4rem;
     bottom: 3rem;
   }
 }
 
-@media screen and (max-width: 666px) { 
-
+@media screen and (max-width: 666px) {
   .landingPage--container {
     padding: 1rem;
   }
@@ -321,13 +320,12 @@ input[type="text"]:focus {
     top: 3rem;
     left: 2rem;
   }
-  
+
   .landingPage > button {
     right: 3rem;
     bottom: 7rem;
   }
 }
-
 
 @keyframes App-logo-spin {
   from {
