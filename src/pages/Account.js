@@ -81,13 +81,13 @@ export default function Account({ session, setSession }) {
         </div>
         <div>
           <button
-            className='button'
+            className="button"
             onClick={() => updateProfile({ username, website, avatar_url })}
             disabled={loading}
           >
             {loading ? "Loading ..." : "Update"}
           </button>
-        
+
           <button
             className="button"
             onClick={() => {
@@ -130,7 +130,7 @@ export default function Account({ session, setSession }) {
           onChange={(e) => setWebsite(e.target.value)}
         />
       </div>
-    </div>
+      </div>
     </main>
   );
 }

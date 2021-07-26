@@ -30,14 +30,13 @@ const App = () => {
         <Router>
           <Switch>
             <Route exact path="/" component={LandingPage} />
-            <Route exact path="/login" component={Auth} />
+            <Route path="/login" component={Auth} /> d
             {!session ? (
               <Redirect to="/login" />
             ) : (
               <>
-                <Route exact path="/board" component={Board} />
+                <Route path="/board" component={Board} />
                 <Route
-                  exact
                   path="/account"
                   render={() => (
                     <Account session={session} setSession={setSession} />
