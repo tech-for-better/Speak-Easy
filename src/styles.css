@@ -37,7 +37,7 @@ body {
 
 .landingPage {
   position: relative;
-  background-image: url('../src/assets/landing-page2.jpg');
+  background-image: url('../src/assets/landing-page4.jpg');
   background-size: cover;
   /* background-color: var(--maverick); */
   min-height: 100vh;
