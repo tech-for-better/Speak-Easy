@@ -42,11 +42,7 @@ export default function Header({ tiles, setTiles }) {
           </button>
         </div>
         <div className="header-container--right">
-          <img
-            src={binIcon}
-            alt="bin"
-            style={{ width: "2.5rem", height: "100%" }}
-          />
+          <img src={binIcon} alt="bin" style={{ marginRight: "0.5rem" }} />
           <input
             type="text"
             name="search"
