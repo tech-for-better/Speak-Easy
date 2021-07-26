@@ -20,7 +20,7 @@ export default function Auth() {
 
   return (
     <div className="flex-center">
-      <div className="form-widget">
+      <div className="form form--login">
         <h1 className="header">Login Page</h1>
         <p className="description">
           Sign in via magic link with your email below

@@ -190,11 +190,16 @@ input[type="website"]:focus {
   justify-content: center;
 }
 
-.form-widget {
+.form,
+.form--account {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
   align-items: center;
+}
+
+.form--login {
+  padding-top: 8rem;
 }
 
 .form__containers {
@@ -220,6 +225,7 @@ input[type="website"]:focus {
   display: flex;
   justify-content: space-between;
   width: 100vw;
+  padding: 0.5rem;
 }
 
 .account-input {
@@ -275,7 +281,6 @@ input[type="website"]:focus {
   display: flex;
   align-items: center;
   max-width: 14%;
-  padding: 1rem;
 }
 
 .header__buttons--right {
