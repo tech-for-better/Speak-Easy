@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { client } from "../lib/api";
 import Avatar from "./Avatar";
+import { Link } from "react-router-dom";
 
 export default function Account({ session, setSession }) {
   const [loading, setLoading] = useState(true);
@@ -68,65 +68,82 @@ export default function Account({ session, setSession }) {
   }
   console.log(session);
   return (
-    <div className="form-widget">
-      <Avatar
-        url={avatar_url}
-        size={150}
-        onUpload={(url) => {
-          setAvatarUrl(url);
-          updateProfile({ username, website, avatar_url: url });
-        }}
-      />
-      <div>
-        <label htmlFor="email">Email</label>
-        <input id="email" type="text" value={session.user.email} disabled />
-      </div>
-      <div>
-        <label htmlFor="username">Name</label>
-        <input
-          id="username"
-          type="text"
-          value={username || ""}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="website">Website</label>
-        <input
-          id="website"
-          type="website"
-          value={website || ""}
-          onChange={(e) => setWebsite(e.target.value)}
-        />
-      </div>
+    <main className="account-main">
+      <div className="account-header">
+        <div>
+          <button className="button">
+            <Link to="/board">Let's speak</Link>
+          </button>
+          <button className="button">
+            <Link to="/">Home</Link>
+          </button>
+        </div>
+        <div>
+          <button
+            className="button"
+            onClick={() => updateProfile({ username, website, avatar_url })}
+            disabled={loading}
+          >
+            {loading ? "Loading ..." : "Update"}
+          </button>
 
-      <div>
-        <button
-          className="button block primary"
-          onClick={() => updateProfile({ username, website, avatar_url })}
-          disabled={loading}
-        >
-          {loading ? "Loading ..." : "Update"}
-        </button>
+          <button
+            className="button"
+            onClick={() => {
+              console.log("clicked");
+              client.auth.signOut();
+            }}
+          >
+            Sign Out
+          </button>
+        </div>
       </div>
-
-      <div>
-        <button
-          className="button block"
-          onClick={() => {
-            console.log("clicked");
-            client.auth.signOut();
+      <div className="form-widget">
+        <Avatar
+          url={avatar_url}
+          size={150}
+          onUpload={(url) => {
+            setAvatarUrl(url);
+            updateProfile({ username, website, avatar_url: url });
           }}
-        >
-          Sign Out
-        </button>
-        <button>
-          <Link to="/board">Let's speak</Link>
-        </button>
-        <button>
-          <Link to="/">Home</Link>
-        </button>
+        />
+        <div>
+          <label htmlFor="email" className="account-label">
+            Email
+          </label>
+          <input
+            className="account-input"
+            id="email"
+            type="text"
+            value={session.user.email}
+            disabled
+          />
+        </div>
+        <div>
+          <label htmlFor="username" className="account-label">
+            Name
+          </label>
+          <input
+            className="account-input"
+            id="username"
+            type="text"
+            value={username || ""}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="website" className="account-label">
+            Website
+          </label>
+          <input
+            className="account-input"
+            id="website"
+            type="website"
+            value={website || ""}
+            onChange={(e) => setWebsite(e.target.value)}
+          />
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
