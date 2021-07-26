@@ -148,7 +148,8 @@ input[placeholder] {
 }
 
 input[type="text"]:focus,
-input[type="website"]:focus {
+input[type="website"]:focus,
+input[type="email"]:focus {
   outline-color: var(--crail);
 }
 
@@ -198,8 +199,23 @@ input[type="website"]:focus {
   align-items: center;
 }
 
+.login-container {
+  background-color: var(--fontColor);
+  width: 100vw;
+  height: 100vh;
+}
+
 .form--login {
   padding-top: 8rem;
+}
+
+.btn-magicLink {
+  color: var(--crail);
+  background-color: transparent;
+  border: 1px solid var(--eucalyptus);
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-transform: uppercase;
 }
 
 .form__containers {
