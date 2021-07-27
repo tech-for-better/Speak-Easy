@@ -19,8 +19,8 @@ export default function Auth() {
   };
 
   return (
-    <div className="row flex flex-center">
-      <div className="col-6 form-widget">
+    <div className="flex-center">
+      <div className="form-widget">
         <h1 className="header">Login Page</h1>
         <p className="description">
           Sign in via magic link with your email below
