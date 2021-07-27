@@ -19,7 +19,6 @@ export default function Header({ tiles, setTiles }) {
 
   const HandleClick = () => {
     const tile = tiles.filter((item) => item.name === search);
-
     setTiles(tile);
     setSearch("");
   };

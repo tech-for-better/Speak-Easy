@@ -31,11 +31,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 2rem;
+  /* font-size: calc(10px + 1.5vmin); */
   color: var(--crail);
 }
 
 .landingPage--container {
+  position: relative;
   width: 80vw;
   border: 0.1rem solid var(--eucalyptus);
   padding: 4rem;
@@ -43,16 +45,16 @@ body {
   background-color: hsl(0, 0%, 96%, 0.85);
 }
 
-.landingPage > h1 {
+.landingPage--container > h1 {
   position: absolute;
-  top: 4rem;
-  left: 9rem;
+  top: -9rem;
+  left: 0;
 }
 
-.landingPage > button {
+.landingPage--container > button {
   position: absolute;
-  right: 9rem;
-  bottom: 9rem;
+  right: 0;
+  bottom: -5rem;
   font-size: 2rem;
   font-weight: bolder;
   background-color: var(--eucalyptus);
@@ -60,6 +62,7 @@ body {
   border: 0.1rem solid var(--eucalyptus);
   padding: 0.8rem;
   text-transform: uppercase;
+  color: var(--fontColor);
 }
 
 .landingPage > button * {
@@ -291,6 +294,10 @@ input[type="email"]:focus {
   color: var(--crail);
 }
 
+.btn--board > a {
+  color: var(--fontColor);
+}
+
 .header__buttons--left {
   /* Account */
   height: auto;
@@ -350,7 +357,7 @@ input[type="email"]:focus {
 }
 
 @media screen and (max-width: 1023px) {
-  .landingPage--container {
+  /* .landingPage--container {
     padding: 1rem;
   }
 
@@ -362,15 +369,15 @@ input[type="email"]:focus {
   .landingPage > button {
     right: 4rem;
     bottom: 3rem;
-  }
+  } */
 }
 
 @media screen and (max-width: 666px) {
-  .landingPage--container {
+  /* .landingPage--container {
     padding: 1rem;
-  }
+  } */
 
-  .landingPage > h1 {
+  /* .landingPage--container > h1 {
     top: 3rem;
     left: 2rem;
   }
@@ -378,7 +385,7 @@ input[type="email"]:focus {
   .landingPage > button {
     right: 3rem;
     bottom: 7rem;
-  }
+  } */
 }
 
 @keyframes App-logo-spin {
