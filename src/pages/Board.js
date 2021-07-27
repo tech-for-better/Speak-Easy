@@ -10,8 +10,6 @@ const Board = () => {
   const [loading, setLoading] = useState(true);
   const [display, setDisplay] = useState([]);
 
-  // const [noah, setNoah] = useState([])
-
   const [value, setValue] = useState('');
   const { speak } = useSpeechSynthesis();
 
@@ -21,7 +19,7 @@ const Board = () => {
 
   async function fetchTiles() {
     // Make a request
-    let { data, error } = await client.from("tiles").select("*");
+    let { data } = await client.from("tiles").select("*");
     setTiles(data);
     setLoading(false);
 
@@ -38,10 +36,10 @@ const Board = () => {
   };
 
   const noah = tiles.filter((noahs) => {
-    return noahs.id === 48 || noahs.id === 72 || noahs.id === 89
+    return noahs.id === 224  || noahs.id === 518  || noahs.id === 673  || noahs.id === 274  || noahs.id === 485 || noahs.id ===  504 || noahs.id === 445 || noahs.id === 66 || noahs.id === 101 || noahs.id === 289 || noahs.id === 492 || noahs.id === 48 || noahs.id === 521 || noahs.id === 302 || noahs.id === 491 || noahs.id === 752;
   });
   const i = tiles.filter((is) => {
-    return is.id === 504 || is.id === 289 || is.id === 224 || is.id === 372 || is.id === 472 || is.id === 141 || is.id === 4 || is.id === 219 || is.id === 217 || is.id === 76 || is.id === 177 || is.id === 495 || is.id === 505 || is.id === 492 || is.id === 502 || is.id === 394
+    return is.id === 495 || is.id === 492 || is.id === 143 || is.id === 245 || is.id === 680 || is.id === 143 || is.id === 245 || is.id === 680 || is.id === 504 || is.id === 289 || is.id === 244 || is.id === 372 || is.id === 472 || is.id === 141 || is.id === 4 || is.id === 219;
   });
 
   const tilesData = tiles.map((tile) => (
@@ -79,7 +77,6 @@ const Board = () => {
       <button onClick={() => speak({ text: value })}>Speak</button>
           <div className="current-card"></div>
         </div>
-        {/* {noah} */}
         {tilesData}
       </div>
     </div>
