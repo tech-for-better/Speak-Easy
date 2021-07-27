@@ -99,17 +99,24 @@ const Board = () => {
           <button onClick={() => speak({ text: vocalizer })}>Speak</button>
         </div>
         <div className="cards--displayed">
+          {/* Call the inner function once you onMouseMove: */}
           {!tilesData.length ? (
-            <p
+            <button
               onMouseMove={() =>
                 setTimeout(() => {
                   fetchTiles();
                 }, 1000)
               }
-              style={{ fontSize: "5rem" }}
+              style={{
+                width: "20rem",
+                height: "20rem",
+                borderRadius: "20%",
+                marginTop: "2rem",
+                lineHeight: "2",
+              }}
             >
-              This pictogram does not exist yet!
-            </p>
+              This pictogram does not exist yet! <br /> Click to try another.
+            </button>
           ) : (
             tilesData
           )}
