@@ -59,11 +59,13 @@ const Board = () => {
         // const { src } = e.target;
         setDisplay([...display, tile]);
         if (tile.id === 0) {
-          setTiles([...noah]);
+          return setTiles([...noah]);
         }
         if (tile.id === 224) {
-          setTiles([...i]);
+          return setTiles([...i]);
         }
+        console.log([...noah]);
+
         let sentence = display.map((displayedTile) => displayedTile.name);
         setVocalizer([...sentence, tile.name]);
         fetchTiles();
