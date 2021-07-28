@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { client } from "../lib/api";
 import { useSpeechSynthesis } from "react-speech-kit";
 import Header from "../components/Header";
-import uniqid from "uniqid";
+// import uniqid from "uniqid";
 
 const Board = () => {
   //Query for and render the list of posts
@@ -74,7 +74,7 @@ const Board = () => {
     <button
       key={tile.id}
       onClick={(e) => {
-        const { src } = e.target;
+        // const { src } = e.target;
         setDisplay([...display, tile]);
         if (tile.id === 0) {
           setTiles([...noah]);
