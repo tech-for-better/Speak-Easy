@@ -71,8 +71,9 @@ export default function Account({ session, setSession }) {
   console.log(session);
 
   //extending session time to about 10 years
-  const newSessionLength = session.expires_in + (10 * 365 * 24 * 60 * 60)
-  console.log(newSessionLength);
+  const newSessionLength = session.expires_in + (10 * 365 * 24 * 60 * 60);
+  
+  //console.log(newSessionLength);
   
   return (
     <main className="account-main">
