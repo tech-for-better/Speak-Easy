@@ -177,13 +177,15 @@ input[type="email"]:focus {
 .cards--output {
   border: 0.1rem solid var(--eucalyptus);
   background-color: transparent;
-  display: flex;
-  align-items: center;
-  padding: 1.5rem;
+  display: inline-block;
+  /* display: flex;
+  align-items: center; */
+  /* padding: 1.5rem; */
   width: 97vw;
   margin: 0 auto;
   border-radius: 0.4rem;
-  height: 12rem;
+  min-height: 10rem;
+  /* height: 12rem; */
   gap: 0.5rem;
 }
 
