@@ -13,16 +13,8 @@ const Board = () => {
   const { speak } = useSpeechSynthesis();
 
   useEffect(() => {
-    // deleteTiles();
     fetchTiles();
   }, []);
-
-  // async function deleteTiles() {
-  //   const { data, error } = await client
-  //     .from("tiles")
-  //     .delete()
-  //     .match({ id: 1102 && 1101 && 1103 });
-  // }
 
   async function fetchTiles() {
     // Make a request
@@ -37,7 +29,6 @@ const Board = () => {
   }
 
   if (loading) return <p>Loading...</p>;
-  if (!tiles.length) return <p>No posts.</p>;
 
   const buttonStyle = {
     margin: "0.1rem",
@@ -56,7 +47,6 @@ const Board = () => {
     <button
       key={tile.id}
       onClick={(e) => {
-        // const { src } = e.target;
         setDisplay([...display, tile]);
         if (tile.id === 0) {
           return setTiles([...noah]);
@@ -78,21 +68,46 @@ const Board = () => {
 
   return (
     <main className="cards-container">
-      <Header tiles={tiles} display={display} setTiles={setTiles} />
+      <Header tiles={tiles} setTiles={setTiles} />
       <div className="cards">
         {/* This is where the selected speech content will be displayed. */}
-        <div className="cards--output">
+        <button
+          className="cards--output"
+          onClick={() => speak({ text: vocalizer })}
+        >
           {display.map((tile) => (
             <img
               key={tile.id}
               src={tile.image}
-              alt="url"
+              alt="card url"
               className="selectedTile"
             />
           ))}
-          <button onClick={() => speak({ text: vocalizer })}>Speak</button>
+          {/* <button onClick={() => speak({ text: vocalizer })}>Speak</button> */}
+        </button>
+        <div className="cards--displayed">
+          {/* Call the inner function once you onMouseMove: */}
+          {!tilesData.length ? (
+            <button
+              onMouseMove={() =>
+                setTimeout(() => {
+                  fetchTiles();
+                }, 1000)
+              }
+              style={{
+                width: "20rem",
+                height: "20rem",
+                borderRadius: "20%",
+                marginTop: "2rem",
+                lineHeight: "2",
+              }}
+            >
+              This pictogram does not exist yet! <br /> Click to try another.
+            </button>
+          ) : (
+            tilesData
+          )}
         </div>
-        <div className="cards--displayed">{tilesData}</div>
       </div>
     </main>
   );
