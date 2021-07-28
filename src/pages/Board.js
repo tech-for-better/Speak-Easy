@@ -87,7 +87,10 @@ const Board = () => {
       <Header tiles={tiles} setTiles={setTiles} />
       <div className="cards">
         {/* This is where the selected speech content will be displayed. */}
-        <div className="cards--output">
+        <button
+          className="cards--output"
+          onClick={() => speak({ text: vocalizer })}
+        >
           {display.map((tile) => (
             <img
               key={tile.id}
@@ -96,8 +99,8 @@ const Board = () => {
               className="selectedTile"
             />
           ))}
-          <button onClick={() => speak({ text: vocalizer })}>Speak</button>
-        </div>
+          {/* <button onClick={() => speak({ text: vocalizer })}>Speak</button> */}
+        </button>
         <div className="cards--displayed">
           {/* Call the inner function once you onMouseMove: */}
           {!tilesData.length ? (
