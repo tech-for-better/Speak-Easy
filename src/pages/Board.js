@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { client } from "../lib/api";
 import { useSpeechSynthesis } from "react-speech-kit";
 import Header from "../components/Header";
-// import uniqid from "uniqid";
 
 const Board = () => {
   //Query for and render the list of posts
@@ -55,6 +54,8 @@ const Board = () => {
         if (tile.id === 224) {
           return setTiles([...i]);
         }
+        console.log([...noah]);
+
         let sentence = display.map((displayedTile) => displayedTile.name);
         setVocalizer([...sentence, tile.name]);
         fetchTiles();
