@@ -11,6 +11,8 @@ export default function Account({ session, setSession }) {
   const [website, setWebsite] = useState(null);
   const [avatar_url, setAvatarUrl] = useState(null);
 
+  //const [session_length, setSession_length] = useState(session.expires_in)
+
   useEffect(() => {
     getProfile();
   }, [session]);
@@ -68,13 +70,6 @@ export default function Account({ session, setSession }) {
       setLoading(false);
     }
   }
-  console.log(session);
-
-  //extending session time to about 10 years
-  const newSessionLength = session.expires_in + (10 * 365 * 24 * 60 * 60);
-  
-  //console.log(newSessionLength);
-  
   return (
     <main className="account-main">
       <div className="account-header">
