@@ -175,6 +175,7 @@ input[type="email"]:focus {
 
 .cards--output {
   border: 0.1rem solid var(--eucalyptus);
+  background-color: transparent;
   display: flex;
   align-items: center;
   padding: 1.5rem;
@@ -212,13 +213,26 @@ input[type="email"]:focus {
   padding-top: 8rem;
 }
 
+.inputField {
+  width: 10em;
+  height: 2em;
+  margin-bottom: 0.5rem;
+}
+
 .btn-magicLink {
-  color: var(--crail);
-  background-color: transparent;
+  background-color: var(--eucalyptus);
   border: 1px solid var(--eucalyptus);
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
+  width: 8em;
+  height: 3em;
+  border-radius: 0.5em;
+}
+
+.btn-magicLink > span {
+  color: var(--fontColor);
+  font-weight: bolder;
 }
 
 .form__containers {
@@ -354,38 +368,6 @@ input[type="email"]:focus {
   color: var(--fontColor);
   font-size: 0.9rem;
   margin: 0 auto;
-}
-
-@media screen and (max-width: 1023px) {
-  /* .landingPage--container {
-    padding: 1rem;
-  }
-
-  .landingPage > h1 {
-    top: 0.8rem;
-    left: 4rem;
-  }
-
-  .landingPage > button {
-    right: 4rem;
-    bottom: 3rem;
-  } */
-}
-
-@media screen and (max-width: 666px) {
-  /* .landingPage--container {
-    padding: 1rem;
-  } */
-
-  /* .landingPage--container > h1 {
-    top: 3rem;
-    left: 2rem;
-  }
-
-  .landingPage > button {
-    right: 3rem;
-    bottom: 7rem;
-  } */
 }
 
 @keyframes App-logo-spin {
