@@ -19,6 +19,7 @@ body {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+  background-color: var(--fontColor);
 }
 
 .landingPage {
@@ -356,36 +357,54 @@ input[type="email"]:focus {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1023px) {
-  /* .landingPage--container {
+/* iPad Pro */
+@media screen and (max-width: 1366px) {
+  .landingPage--container > h1 {
+    top: -13rem;
+  }
+
+  .landingPage--container > button {
+    bottom: -9rem;
+    font-size: 3rem;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+   .landingPage {
+    font-size: 1rem;
+  }
+
+  .landingPage--container {
     padding: 1rem;
   }
 
-  .landingPage > h1 {
-    top: 0.8rem;
-    left: 4rem;
+  .landingPage--container > h1 {
+    top: -5rem;
   }
 
-  .landingPage > button {
-    right: 4rem;
-    bottom: 3rem;
-  } */
+  .landingPage--container > button {
+    bottom: -4rem;
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 666px) {
-  /* .landingPage--container {
-    padding: 1rem;
-  } */
-
-  /* .landingPage--container > h1 {
-    top: 3rem;
-    left: 2rem;
+  .landingPage {
+    font-size: 1rem;
   }
 
-  .landingPage > button {
-    right: 3rem;
-    bottom: 7rem;
-  } */
+  .landingPage--container {
+    padding: 2rem;
+  }
+
+   .landingPage--container > h1 {
+    top: -8rem;
+  }
+
+  .landingPage--container > button {
+    bottom: -7rem;
+  }
 }
 
 @keyframes App-logo-spin {
