@@ -401,6 +401,10 @@ input[type="email"]:focus {
     bottom: -4rem;
     font-size: 1rem;
   }
+
+  .header__buttons--left {
+    max-width: 20%;
+  }
 }
 
 @media screen and (max-width: 666px) {
@@ -418,6 +422,10 @@ input[type="email"]:focus {
 
   .landingPage--container > button {
     bottom: -7rem;
+  }
+
+  .header__buttons--left {
+    max-width: 30%;
   }
 }
 
