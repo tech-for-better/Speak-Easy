@@ -109,7 +109,7 @@ export default function Account({ session, setSession }) {
           </button>
         </div>
       </div>
-      <div className="form-widget">
+      <div className="form form--account">
         <Avatar
           url={avatar_url}
           size={150}
