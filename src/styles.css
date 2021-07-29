@@ -19,6 +19,7 @@ body {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+  background-color: var(--fontColor);
 }
 
 /* .row { remove from Auth.js div
@@ -44,11 +45,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 2rem;
+  /* font-size: calc(10px + 1.5vmin); */
   color: var(--crail);
 }
 
 .landingPage--container {
+  position: relative;
   width: 80vw;
   border: 0.1rem solid var(--eucalyptus);
   padding: 4rem;
@@ -56,16 +59,16 @@ body {
   background-color: hsl(0, 0%, 96%, 0.85);
 }
 
-.landingPage > h1 {
+.landingPage--container > h1 {
   position: absolute;
-  top: 4rem;
-  left: 9rem;
+  top: -9rem;
+  left: 0;
 }
 
-.landingPage > button {
+.landingPage--container > button {
   position: absolute;
-  right: 9rem;
-  bottom: 9rem;
+  right: 0;
+  bottom: -5rem;
   font-size: 2rem;
   font-weight: bolder;
   background-color: var(--eucalyptus);
@@ -73,6 +76,7 @@ body {
   border: 0.1rem solid var(--eucalyptus);
   padding: 0.8rem;
   text-transform: uppercase;
+  color: var(--fontColor);
 }
 
 .landingPage > button * {
@@ -161,7 +165,8 @@ input[placeholder] {
 }
 
 input[type="text"]:focus,
-input[type="website"]:focus {
+input[type="website"]:focus,
+input[type="email"]:focus {
   outline-color: var(--crail);
 }
 
@@ -184,13 +189,16 @@ input[type="website"]:focus {
 
 .cards--output {
   border: 0.1rem solid var(--eucalyptus);
-  display: flex;
-  align-items: center;
-  padding: 1.5rem;
+  background-color: transparent;
+  display: inline-block;
+  /* display: flex;
+  align-items: center; */
+  /* padding: 1.5rem; */
   width: 97vw;
   margin: 0 auto;
   border-radius: 0.4rem;
-  height: 12rem;
+  min-height: 10rem;
+  /* height: 12rem; */
   gap: 0.5rem;
 }
 
@@ -205,11 +213,44 @@ input[type="website"]:focus {
   gap: 20px;
 }
 
-.form-widget.login {
+.form,
+.form--account {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
   align-items: center;
+}
+
+.login-container {
+  background-color: var(--fontColor);
+  width: 100vw;
+  height: 100vh;
+}
+
+.form--login {
+  padding-top: 8rem;
+}
+
+.inputField {
+  width: 10em;
+  height: 2em;
+  margin-bottom: 0.5rem;
+}
+
+.btn-magicLink {
+  background-color: var(--eucalyptus);
+  border: 1px solid var(--eucalyptus);
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  width: 8em;
+  height: 3em;
+  border-radius: 0.5em;
+}
+
+.btn-magicLink > span {
+  color: var(--fontColor);
+  font-weight: bolder;
 }
 
 .form__containers {
@@ -235,6 +276,7 @@ input[type="website"]:focus {
   display: flex;
   justify-content: space-between;
   width: 100vw;
+  padding: 0.5rem;
 }
 
 .account-input {
@@ -284,13 +326,16 @@ input[type="website"]:focus {
   color: var(--crail);
 }
 
+.btn--board > a {
+  color: var(--fontColor);
+}
+
 .header__buttons--left {
   /* Account */
   height: auto;
   display: flex;
   align-items: center;
-  max-width: 14%;
-  padding: 1rem;
+  max-width: 13%;
 }
 
 .header__buttons--right {
@@ -346,35 +391,53 @@ input[type="website"]:focus {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1023px) {
+/* iPad Pro */
+@media screen and (max-width: 1366px) {
+  .landingPage--container > h1 {
+    top: -13rem;
+  }
+
+  .landingPage--container > button {
+    bottom: -9rem;
+    font-size: 3rem;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+   .landingPage {
+    font-size: 1rem;
+  }
+
   .landingPage--container {
     padding: 1rem;
   }
 
-  .landingPage > h1 {
-    top: 0.8rem;
-    left: 4rem;
+  .landingPage--container > h1 {
+    top: -5rem;
   }
 
-  .landingPage > button {
-    right: 4rem;
-    bottom: 3rem;
+  .landingPage--container > button {
+    bottom: -4rem;
+    font-size: 1rem;
   }
 }
 
 @media screen and (max-width: 666px) {
+  .landingPage {
+    font-size: 1rem;
+  }
+
   .landingPage--container {
-    padding: 1rem;
+    padding: 2rem;
   }
 
-  .landingPage > h1 {
-    top: 3rem;
-    left: 2rem;
+   .landingPage--container > h1 {
+    top: -8rem;
   }
 
-  .landingPage > button {
-    right: 3rem;
-    bottom: 7rem;
+  .landingPage--container > button {
+    bottom: -7rem;
   }
 }
 

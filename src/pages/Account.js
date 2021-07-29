@@ -11,6 +11,8 @@ export default function Account({ session, setSession }) {
   const [website, setWebsite] = useState(null);
   const [avatar_url, setAvatarUrl] = useState(null);
 
+  //const [session_length, setSession_length] = useState(session.expires_in)
+
   useEffect(() => {
     getProfile();
   }, [session]);
@@ -68,7 +70,6 @@ export default function Account({ session, setSession }) {
       setLoading(false);
     }
   }
-  console.log(session);
   return (
     <main className="account-main">
       <div className="account-header">
@@ -92,7 +93,7 @@ export default function Account({ session, setSession }) {
             </Link>
           </button>
         </div>
-        <div class="header__buttons--right">
+        <div className="header__buttons--right">
           <button
             className="button__signOut"
             onClick={() => {
@@ -104,7 +105,7 @@ export default function Account({ session, setSession }) {
           </button>
         </div>
       </div>
-      <div className="form-widget">
+      <div className="form form--account">
         <Avatar
           url={avatar_url}
           size={150}

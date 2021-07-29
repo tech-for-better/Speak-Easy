@@ -19,13 +19,11 @@ export default function Auth() {
   };
 
   return (
-    <div className="flex flex-center account-login--main">
-      <div className="form-widget login">
-        <h1 className="header">Login Page</h1>
-        <p className="description">
-          Sign in via magic link with your email below
-        </p>
-        
+    <div className="login-container">
+      <div className="form form--login">
+        <h1>Login Page</h1>
+        <p>Sign in via magic link with your email below</p>
+        <div>
           <input
             className="account-login--input"
             type="email"
@@ -33,14 +31,14 @@ export default function Auth() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-        
+        </div>
         <div>
           <button
             onClick={(e) => {
               e.preventDefault();
               handleLogin(email);
             }}
-            className={"button"}
+            className={"btn-magicLink"}
             disabled={loading}
           >
             {loading ? <span>Loading</span> : <span>Send magic link</span>}
