@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import binIcon from "../assets/delete-bin.png";
 import homeIcon from "../assets/home.png";
 import accountIcon from "../assets/account.png";
+import refreshIcon from "../assets/restart-line.png";
 
-export default function Header({ tiles, setTiles }) {
+export default function Header({ tiles, setTiles, setDisplay, fetchTiles }) {
   const [search, setSearch] = useState("");
   console.log("search", search);
 
@@ -21,6 +21,11 @@ export default function Header({ tiles, setTiles }) {
     const tile = tiles.filter((item) => item.name === search);
     setTiles(tile);
     setSearch("");
+  };
+
+  const handleRefreshClick = () => {
+    setDisplay([]);
+    fetchTiles();
   };
 
   console.log("tiles", tiles);
@@ -41,7 +46,12 @@ export default function Header({ tiles, setTiles }) {
           </button>
         </div>
         <div className="header-container--right">
-          <img src={binIcon} alt="bin" style={{ marginRight: "0.5rem" }} />
+          <img
+            src={refreshIcon}
+            alt="refresh icon"
+            style={{ marginRight: "0.5rem" }}
+            onClick={handleRefreshClick}
+          />
           <input
             type="text"
             name="search"

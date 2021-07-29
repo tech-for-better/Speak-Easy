@@ -218,7 +218,7 @@ input[type="email"]:focus {
 }
 
 .inputField {
-  width: 10em;
+  width: 15em;
   height: 2em;
   margin-bottom: 0.5rem;
 }
