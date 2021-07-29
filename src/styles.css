@@ -72,7 +72,7 @@ body {
   font-size: 2rem;
   font-weight: bolder;
   background-color: var(--eucalyptus);
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   border: 0.1rem solid var(--eucalyptus);
   padding: 0.8rem;
   text-transform: uppercase;
@@ -101,7 +101,7 @@ body {
 .cards--displayed > button {
   background-color: transparent;
   border-radius: 0.4rem;
-  border: 0.1rem solid var(--eucalyptus);
+  border: 2px solid var(--eucalyptus);
   cursor: pointer;
 }
 
@@ -151,7 +151,7 @@ body {
   font-size: 1.1rem;
   background-color: transparent;
   border-radius: 0.2rem;
-  border: 0.1rem solid var(--eucalyptus);
+  border: 2px solid var(--eucalyptus);
 }
 
 input[type="text"] {
@@ -161,7 +161,7 @@ input[type="text"] {
 
 input[placeholder] {
   background-color: transparent;
-  border: 1px solid var(--eucalyptus);
+  border: 2px solid var(--eucalyptus);
 }
 
 input[type="text"]:focus,
@@ -188,7 +188,7 @@ input[type="email"]:focus {
 }
 
 .cards--output {
-  border: 0.1rem solid var(--eucalyptus);
+  border: 2px solid var(--eucalyptus);
   background-color: transparent;
   display: inline-block;
   /* display: flex;
@@ -283,7 +283,7 @@ input[type="email"]:focus {
   width: 100%;
   color: var(--crail);
   background-color: var(--fontColor);
-  border: 1px solid var(--eucalyptus);
+  border: 2px solid var(--eucalyptus);
   border-radius: 0.2rem;
   padding: 8px;
   font-size: 0.9rem;
@@ -307,7 +307,7 @@ input[type="email"]:focus {
 .button__update {
   color: var(--crail);
   background-color: var(--fontColor);
-  border: 1px solid var(--eucalyptus);
+  border: 2px solid var(--eucalyptus);
   border-radius: 0.2rem;
   cursor: pointer;
   font-size: 1rem;
@@ -369,7 +369,7 @@ input[type="email"]:focus {
   align-items: center;
   justify-content: center;
   padding: 0.5rem 1rem;
-  border: 1px solid var(--eucalyptus);
+  border: 2px solid var(--eucalyptus);
   border-radius: 0.2rem;
   cursor: pointer;
   font-size: 0.9rem;
