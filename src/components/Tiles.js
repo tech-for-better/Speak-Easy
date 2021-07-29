@@ -1,4 +1,5 @@
 import React from "react";
+import uniqid from "uniqid";
 
 export default function Tiles({
   tiles,
@@ -41,9 +42,10 @@ export default function Tiles({
   const tilesData = tiles.map((tile) => (
     <button
       key={tile.id}
-      //   key={uniqid()}
+      // key={uniqid()}
       onClick={(e) => {
-        setDisplay([...display, tile]);
+        // setDisplay([...display, tile]);
+        setDisplay([...display, { ...tile, uniqId: uniqid() }]);
         if (tile.id === 0) {
           setTiles([...noah]);
         }
@@ -59,7 +61,7 @@ export default function Tiles({
       <img src={tile.image} alt={tile.name} />
     </button>
   ));
-
+  console.log("display", display);
   return (
     <div className="cards--displayed">
       {/* Call the inner function once you onMouseMove: */}

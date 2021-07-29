@@ -37,20 +37,6 @@ const Board = () => {
       <Header tiles={tiles} setTiles={setTiles} />
       <div className="cards">
         {/* This is where the selected speech content will be displayed. */}
-        {/* <button
-          className="cards--output"
-          onClick={() => speak({ text: vocalizer })}
-        >
-          {display.map((tile) => (
-            <img
-              // key={tile.id}
-              key={uniqid()}
-              src={tile.image}
-              alt="card url"
-              className="selectedTile"
-            />
-          ))}
-        </button> */}
         <DisplayedTiles display={display} vocalizer={vocalizer} speak={speak} />
         {/* Start */}
         <Tiles
