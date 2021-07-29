@@ -177,16 +177,16 @@ input[type="email"]:focus {
 .cards--output {
   border: 0.1rem solid var(--eucalyptus);
   background-color: transparent;
-  display: inline-block;
-  /* display: flex;
-  align-items: center; */
-  /* padding: 1.5rem; */
-  width: 97vw;
+  display: flex;
+  padding: 0.5rem;
+  width: 96vw;
   margin: 0 auto;
   border-radius: 0.4rem;
   min-height: 10rem;
-  /* height: 12rem; */
+  grid-gap: 0.5rem;
   gap: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 0.65rem;
 }
 
 .selectedTile {
@@ -385,9 +385,8 @@ input[type="email"]:focus {
   }
 }
 
-
 @media screen and (max-width: 1024px) {
-   .landingPage {
+  .landingPage {
     font-size: 1rem;
   }
 
@@ -418,7 +417,7 @@ input[type="email"]:focus {
     padding: 2rem;
   }
 
-   .landingPage--container > h1 {
+  .landingPage--container > h1 {
     top: -8rem;
   }
 
