@@ -15,7 +15,7 @@ import Account from "./pages/Account";
 
 const App = () => {
   const [session, setSession] = useState(client.auth.session());
-  const [session_length, setSession_length] = useState(session.expires_in);
+  //const [session_length, setSession_length] = useState(session.expires_in);
 
   useEffect(() => {
     setSession(client.auth.session());
@@ -27,16 +27,16 @@ const App = () => {
   }, []);
 
   //trying to change the length of the session
-  useEffect(() => {
-    changeSessionLength()
+//   useEffect(() => {
+//     changeSessionLength()
     
-}, [session]);
+// }, [session]);
 
-function changeSessionLength() {
-  setSession_length(s => s + (10 * 365 * 24 * 60 * 60))
-}
+// function changeSessionLength() {
+//   setSession_length(s => s + (10 * 365 * 24 * 60 * 60))
+// }
 
-  console.log('ten', session_length, session);
+  console.log(session);
 
   return (
     <>
