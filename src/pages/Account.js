@@ -92,7 +92,7 @@ export default function Account({ session, setSession }) {
             </Link>
           </button>
         </div>
-        <div class="header__buttons--right">
+        <div className="header__buttons--right">
           <button
             className="button__signOut"
             onClick={() => {
