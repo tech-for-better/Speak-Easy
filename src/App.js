@@ -28,9 +28,13 @@ const App = () => {
 
   //trying to change the length of the session
   useEffect(() => {
-    setSession_length(s => s + (10 * 365 * 24 * 60 * 60))
+    changeSessionLength()
+    
+}, [session]);
 
-}, []);
+function changeSessionLength() {
+  setSession_length(s => s + (10 * 365 * 24 * 60 * 60))
+}
 
   console.log('ten', session_length, session);
 
