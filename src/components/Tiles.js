@@ -42,9 +42,7 @@ export default function Tiles({
   const tilesData = tiles.map((tile) => (
     <button
       key={tile.id}
-      // key={uniqid()}
       onClick={(e) => {
-        // setDisplay([...display, tile]);
         setDisplay([...display, { ...tile, uniqId: uniqid() }]);
         if (tile.id === 0) {
           setTiles([...noah]);
