@@ -129,7 +129,7 @@ body {
 .header-container--right {
   display: flex;
   width: 50%;
-  height: auto;
+  height: 3em;
   justify-content: flex-end;
   padding-right: 0.5rem;
 }
@@ -348,6 +348,7 @@ input[type="text"]:focus {
 
 input[name="search"] {
   color: var(--crail);
+  font-size: 1em;
 }
 
 .header__buttons--left {
