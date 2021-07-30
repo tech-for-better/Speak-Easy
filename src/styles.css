@@ -325,6 +325,7 @@ input[type="text"]:focus {
   cursor: pointer;
   font-size: 1rem;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .button__signOut,
@@ -343,13 +344,6 @@ input[type="text"]:focus {
   margin: 2rem;
 }
 
-.button__letsSpeak,
-.button__home,
-* {
-  text-decoration: none;
-  color: var(--crail);
-  font-size: 1em;
-}
 input[name="search"] {
   color: var(--crail);
 }
