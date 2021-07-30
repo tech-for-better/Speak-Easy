@@ -69,7 +69,7 @@ body {
   left: 0;
 }
 
-.landingPage--container > button {
+.btn--board{
   position: absolute;
   right: 0;
   bottom: -5rem;
@@ -83,10 +83,15 @@ body {
   color: var(--fontColor);
 }
 
-.landingPage > button * {
+.btn--board > a {
+  color: var(--fontColor);
+  text-decoration: none;
+}
+
+/* .landingPage > button * {
   text-decoration: none;
   color: var(--fontColor);
-}
+} */
 
 .cards-container {
   min-height: 100vh;
@@ -346,10 +351,6 @@ input[type="text"]:focus {
 
 input[name="search"] {
   color: var(--crail);
-}
-
-.btn--board > a {
-  color: var(--fontColor);
 }
 
 .header__buttons--left {
