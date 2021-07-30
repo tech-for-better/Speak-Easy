@@ -38,12 +38,13 @@ export default function Header({ tiles, setTiles, setDisplay, fetchTiles }) {
     <>
       <div className="header-container">
         <div className="header-container--left">
-          <button>
+          {/* Action */}
+          <button className="btn" aria-label="Home Page">
             <Link to="/">
               <img src={homeIcon} alt="home icon" style={{ width: "120%" }} />
             </Link>
           </button>
-          <button>
+          <button className="btn" aria-label="Account Page">
             <Link to="/account">
               <img
                 src={accountIcon}

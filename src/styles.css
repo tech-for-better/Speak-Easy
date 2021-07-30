@@ -162,7 +162,7 @@ input[type="text"] {
 
 input[placeholder] {
   background-color: transparent;
-  border: 1px solid var(--eucalyptus);
+  border: 2px solid var(--eucalyptus);
 }
 
 input[type="text"]:focus,
