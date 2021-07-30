@@ -8,7 +8,6 @@ export default function Tiles({
   display,
   fetchTiles,
   setDisplay,
-  //setTiles,
   setVocalizer,
 }) {
   const buttonStyle = {
