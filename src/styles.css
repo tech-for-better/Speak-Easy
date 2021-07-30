@@ -15,7 +15,7 @@
 html,
 body {
   font-family: var(--font);
-  font-weight: bolder;
+  font-weight: bold;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -40,7 +40,7 @@ body {
 }
 
 .landingPage {
-  position: relative;
+  /* position: relative; */
   background-image: url("../src/assets/LandingPage-background.jpg");
   background-size: cover;
   min-height: 100vh;
@@ -419,7 +419,7 @@ input[name="search"] {
     top: -13rem;
   }
 
-  .landingPage--container > button {
+  .btn--board {
     bottom: -9rem;
     font-size: 3rem;
   }
@@ -438,7 +438,7 @@ input[name="search"] {
     top: -5rem;
   }
 
-  .landingPage--container > button {
+  .btn--board {
     bottom: -4rem;
     font-size: 1rem;
   }
@@ -461,7 +461,7 @@ input[name="search"] {
     top: -8rem;
   }
 
-  .landingPage--container > button {
+  .btn--board {
     bottom: -7rem;
   }
 
