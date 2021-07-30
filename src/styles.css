@@ -3,15 +3,19 @@
   --crail: hsl(16, 50%, 51%);
   --celery: hsl(88, 54%, 58%);
   --fontColor: hsl(0, 0%, 96%);
+  --font: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 * {
   box-sizing: border-box;
 }
 
+/* @TODO: Style value property of input field */
+
 html,
 body {
-  font-family: "Oswald", sans-serif;
+  font-family: var(--font);
+  font-weight: bolder;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -101,7 +105,7 @@ body {
 .cards--displayed > button {
   background-color: transparent;
   border-radius: 0.4rem;
-  border: 2px solid var(--eucalyptus);
+  border: 0.2rem solid var(--eucalyptus);
   cursor: pointer;
 }
 
@@ -126,6 +130,20 @@ body {
   display: flex;
   width: 50%;
   height: auto;
+  justify-content: flex-end;
+  padding-right: 0.5rem;
+}
+
+form {
+  display: flex;
+  width: 70%;
+}
+
+button[type="submit"] {
+  background-color: var(--eucalyptus);
+  border: 0.2em solid var(--eucalyptus);
+  margin-left: 0.1rem;
+  width: 15%;
 }
 
 .header-container--left {
@@ -164,15 +182,19 @@ input[placeholder] {
   border: 2px solid var(--eucalyptus);
 }
 
-input[type="text"]:focus,
 input[type="website"]:focus,
 input[type="email"]:focus {
   outline-color: var(--crail);
 }
 
+input[type="text"]:focus {
+  outline-color: var(--eucalyptus);
+}
+
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--crail);
+  font-family: var(--font);
 }
 
 .cards-grid {
@@ -188,8 +210,8 @@ input[type="email"]:focus {
 }
 
 .cards--output {
-  border: 2px solid var(--eucalyptus);
-  background-color: transparent;
+  border: 0.1rem solid var(--eucalyptus);
+  background-color: var(--eucalyptus);
   display: flex;
   /* display: inline-block; */
   padding: 0.5rem;
@@ -201,6 +223,7 @@ input[type="email"]:focus {
   gap: 0.5rem;
   overflow: hidden;
   margin-bottom: 0.65rem;
+  border: 1px solid var(--eucalyptus);
 }
 
 .selectedTile {
@@ -233,7 +256,7 @@ input[type="email"]:focus {
 }
 
 .inputField {
-  width: 10em;
+  width: 15em;
   height: 2em;
   margin-bottom: 0.5rem;
 }
@@ -325,6 +348,10 @@ input[type="email"]:focus {
 * {
   text-decoration: none;
   color: var(--crail);
+  font-size: 1em;
+}
+input[name="search"] {
+  color: var(--crail);
 }
 
 .btn--board > a {
@@ -383,12 +410,11 @@ input[type="email"]:focus {
   width: 100vw;
   background-color: var(--celery);
   text-align: center;
-  font-size: 12px;
   height: auto;
   max-width: 100%;
   padding: 0.5em 0;
   color: var(--fontColor);
-  font-size: 0.9rem;
+  font-size: 1.1em;
   margin: 0 auto;
 }
 

@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import binIcon from "../assets/delete-bin.png";
 import homeIcon from "../assets/home.png";
 import accountIcon from "../assets/account.png";
+import refreshIcon from "../assets/restart-line.png";
 
-export default function Header({ tiles, setTiles }) {
+//@TODO: Prevent re-rendering after vocalization
+//@TODO: Filter by search
+
+export default function Header({ tiles, setTiles, setDisplay, fetchTiles }) {
   const [search, setSearch] = useState("");
   console.log("search", search);
 
@@ -14,12 +17,19 @@ export default function Header({ tiles, setTiles }) {
     setSearch(value);
   };
 
-  //@TODO: Prevent re-rendering after vocalization
-  //@TODO: Filter by search
+  const submitHandler = (event) => {
+    event.preventDefault();
+  };
 
   const HandleClick = () => {
     const tile = tiles.filter((item) => item.name === search);
     setTiles(tile);
+    setSearch("");
+  };
+
+  const handleRefreshClick = () => {
+    setDisplay([]);
+    fetchTiles();
     setSearch("");
   };
 
@@ -31,27 +41,38 @@ export default function Header({ tiles, setTiles }) {
         <div className="header-container--left">
           <button>
             <Link to="/">
-              <img src={homeIcon} alt="" style={{ width: "120%" }} />
+              <img src={homeIcon} alt="home icon" style={{ width: "120%" }} />
             </Link>
           </button>
           <button>
             <Link to="/account">
-              <img src={accountIcon} alt="" style={{ width: "120%" }} />
+              <img
+                src={accountIcon}
+                alt="account icon"
+                style={{ width: "120%" }}
+              />
             </Link>
           </button>
         </div>
         <div className="header-container--right">
-          <img src={binIcon} alt="bin" style={{ marginRight: "0.5rem" }} />
-          <input
-            type="text"
-            name="search"
-            value={search}
-            onChange={HandleChange}
-            placeholder="Search..."
+          <img
+            src={refreshIcon}
+            alt="refresh icon"
+            style={{ marginRight: "0.5rem" }}
+            onClick={handleRefreshClick}
           />
-          <button type="button" onClick={HandleClick}>
-            🔎
-          </button>
+          <form onSubmit={submitHandler}>
+            <input
+              type="text"
+              name="search"
+              value={search}
+              onChange={HandleChange}
+              placeholder="Search..."
+            />
+            <button type="submit" onClick={HandleClick}>
+              🔍
+            </button>
+          </form>
         </div>
       </div>
     </>

@@ -19,7 +19,6 @@ export default function Tiles({
       key={tile.id}
       onClick={(e) => {
         setDisplay([...display, { ...tile, uniqId: uniqid() }]);
-        
         let sentence = display.map((displayedTile) => displayedTile.name);
         setVocalizer([...sentence, tile.name]);
         fetchTiles();
