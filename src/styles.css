@@ -130,7 +130,7 @@ body {
 .header-container--right {
   display: flex;
   width: 50%;
-  height: 3em;
+  height: 2.5em;
   justify-content: flex-end;
   padding-right: 0.5rem;
 }
