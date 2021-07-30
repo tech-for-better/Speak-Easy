@@ -34,7 +34,13 @@ const Board = () => {
 
   return (
     <main className="cards-container">
-      <Header tiles={tiles} setTiles={setTiles} />
+      <Header
+        tiles={tiles}
+        setTiles={setTiles}
+        display={display}
+        setDisplay={setDisplay}
+        fetchTiles={fetchTiles}
+      />
       <div className="cards">
         {/* This is where the selected speech content will be displayed. */}
         <DisplayedTiles display={display} vocalizer={vocalizer} speak={speak} />

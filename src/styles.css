@@ -113,6 +113,20 @@ body {
   display: flex;
   width: 50%;
   height: auto;
+  justify-content: flex-end;
+  padding-right: 0.5rem;
+}
+
+form {
+  display: flex;
+  width: 70%;
+  height: auto;
+  justify-content: flex-end;
+}
+
+button[type="submit"] {
+  width: 15%;
+  margin-left: 0.01rem;
 }
 
 .header-container--left {
@@ -218,7 +232,7 @@ input[type="email"]:focus {
 }
 
 .inputField {
-  width: 10em;
+  width: 15em;
   height: 2em;
   margin-bottom: 0.5rem;
 }
