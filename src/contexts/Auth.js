@@ -25,7 +25,7 @@ export default function Auth() {
         <p>Sign in via magic link with your email below</p>
         <div>
           <input
-            className="inputField"
+            className="login-input--email"
             type="email"
             placeholder="Your email"
             value={email}

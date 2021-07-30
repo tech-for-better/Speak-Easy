@@ -20,7 +20,7 @@ const Board = () => {
 
   async function fetchTiles() {
     // Make a request
-    const { data, error } = await client.from("tiles").select("*");
+    let { data, error } = await client.from("tiles").select("*");
     setTiles(data);
     setLoading(false);
 

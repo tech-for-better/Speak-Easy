@@ -68,7 +68,6 @@ export default function Account({ session, setSession }) {
       setLoading(false);
     }
   }
-  console.log(session);
   return (
     <main className="account-main">
       <div className="account-header">
