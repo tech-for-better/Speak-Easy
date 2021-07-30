@@ -4,7 +4,8 @@ const DisplayedTiles = ({ display, speak, vocalizer }) => {
   return (
     <>
       <button
-        className="cards--output"
+        className="btn cards--output"
+        aria-label="Vocalize selected pictograms"
         onClick={() => speak({ text: vocalizer })}
       >
         {display.map((tile) => (

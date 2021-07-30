@@ -15,41 +15,12 @@ export default function Tiles({
     height: "10rem",
   };
 
-  const noah = tiles.filter((noahs) => {
-    return noahs.id === 48 || noahs.id === 72 || noahs.id === 89;
-  });
-  const i = tiles.filter((is) => {
-    return (
-      is.id === 504 ||
-      is.id === 289 ||
-      is.id === 224 ||
-      is.id === 372 ||
-      is.id === 472 ||
-      is.id === 141 ||
-      is.id === 4 ||
-      is.id === 219 ||
-      is.id === 217 ||
-      is.id === 76 ||
-      is.id === 177 ||
-      is.id === 495 ||
-      is.id === 505 ||
-      is.id === 492 ||
-      is.id === 502 ||
-      is.id === 394
-    );
-  });
-
   const tilesData = tiles.map((tile) => (
     <button
       key={tile.id}
       onClick={(e) => {
         setDisplay([...display, { ...tile, uniqId: uniqid() }]);
-        if (tile.id === 0) {
-          setTiles([...noah]);
-        }
-        if (tile.id === 224) {
-          setTiles([...i]);
-        }
+
         let sentence = display.map((displayedTile) => displayedTile.name);
         setVocalizer([...sentence, tile.name]);
         fetchTiles();

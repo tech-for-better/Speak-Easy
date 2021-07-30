@@ -30,6 +30,7 @@ export default function Header({ tiles, setTiles, setDisplay, fetchTiles }) {
   const handleRefreshClick = () => {
     setDisplay([]);
     fetchTiles();
+    setSearch("");
   };
 
   console.log("tiles", tiles);
@@ -38,13 +39,12 @@ export default function Header({ tiles, setTiles, setDisplay, fetchTiles }) {
     <>
       <div className="header-container">
         <div className="header-container--left">
-          {/* Action */}
-          <button className="btn" aria-label="Home Page">
+          <button>
             <Link to="/">
               <img src={homeIcon} alt="home icon" style={{ width: "120%" }} />
             </Link>
           </button>
-          <button className="btn" aria-label="Account Page">
+          <button>
             <Link to="/account">
               <img
                 src={accountIcon}
@@ -70,7 +70,7 @@ export default function Header({ tiles, setTiles, setDisplay, fetchTiles }) {
               placeholder="Search..."
             />
             <button type="submit" onClick={HandleClick}>
-              🔎
+              🔍
             </button>
           </form>
         </div>
