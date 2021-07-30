@@ -45,6 +45,7 @@ const Board = () => {
           setDisplay={setDisplay}
           setVocalizer={setVocalizer}
           fetchTiles={fetchTiles}
+          setTiles={setTiles}
         />
         {/* End */}
       </div>
