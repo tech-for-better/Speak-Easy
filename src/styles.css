@@ -275,7 +275,7 @@ input[type="text"]:focus {
 .form__containers {
   display: flex;
   flex-direction: column;
-  font-size: 0.8em;
+  font-size: 0.7em;
   text-transform: uppercase;
   margin: 0.5rem;
 }
@@ -314,7 +314,7 @@ input[type="text"]:focus {
   border: 2px solid var(--eucalyptus);
   border-radius: 0.2rem;
   padding: 8px;
-  font-size: 1.4em;
+  font-size: 1.1em;
 }
 
 .button__letsSpeak,
@@ -339,7 +339,7 @@ input[type="text"]:focus {
   border: 2px solid var(--eucalyptus);
   border-radius: 0.2rem;
   cursor: pointer;
-  font-size: 0.9em;
+  font-size: 0.7em;
   text-transform: uppercase;
   padding: 0.5rem;
   font-weight: bold;
