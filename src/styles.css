@@ -88,11 +88,6 @@ body {
   text-decoration: none;
 }
 
-/* .landingPage > button * {
-  text-decoration: none;
-  color: var(--fontColor);
-} */
-
 .cards-container {
   min-height: 100vh;
   max-width: 100vw;
