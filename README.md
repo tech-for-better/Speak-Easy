@@ -2,7 +2,7 @@
 
 ## Project overview
 
-An MVP for Full-stack Tech For Better project by FAC21. 
+An MVP for Full-stack Tech For Better project by FAC21 built with Supabase as backend and React as front-end.
 
 [Speak-Easy](www.speak-easy.uk) is a predictive text to voice application designed to help people communicate, enhancing their quality of life and independence.
 
@@ -34,8 +34,6 @@ Design
 <img src="https://i.imgur.com/fMjGTTb.png" height=100>
 
 <img src="https://i.imgur.com/9u3HsWI.png" height=100>
-
-The project is built with Supabase as backend and React as front-end.
 
 <img src='./src/assets/supabase.png' height=100>
 
