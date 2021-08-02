@@ -63,7 +63,7 @@ Dependencies
 
 [UI](./src/assets/Schema-.png)
 
-<img src="./src/assets/Schema.png" width="450px" >
+<img src="./src/assets/Schema-.png" width="450px" >
 
 ---
 
