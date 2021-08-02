@@ -18,11 +18,11 @@ An MVP for Full-stack Tech For Better project by FAC21 built with Supabase as ba
 - [Tech Stack](#Tech-Stack)
 - [Database schema](#Database-schema)
 - [Features](#Features)
-- [🏁 Getting started](#Getting-started)
+- [Getting started](#Getting-started)
   - [Database setup](#Database-setup)
-- [📆 Project Timeline](#Project-Timeline)
+- [Project Timeline](#Project-Timeline)
 - [Reflections and What Next](#Reflections-and-What's-Next)
-<!-- - 👨‍🏫 Key takeaways
+<!-- - Key takeaways
 - ⏳ Additional Features -->
 
 ---
@@ -81,7 +81,7 @@ What can you do?
 
 ---
 
-## 🏁 Getting started
+## Getting started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -109,7 +109,7 @@ You will also see any lint errors in the console.
 
 ---
 
-## 📆 Project Timeline
+## Project Timeline
 
 ### Admin
 
