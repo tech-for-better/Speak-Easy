@@ -94,6 +94,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 0.4em;
 }
 
 .cards--displayed > button {
@@ -123,7 +124,7 @@ body {
 .header-container--right {
   display: flex;
   width: 50%;
-  height: auto;
+  height: 2.5em;
   justify-content: flex-end;
   padding-right: 0.5rem;
 }
@@ -221,6 +222,14 @@ input[type="text"]:focus {
   margin-bottom: 0.65rem;
 }
 
+.wrapper--img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 0.4rem;
+  border: 0.2rem solid var(--eucalyptus);
+}
+
+
 /* .btn--scroll  */
 .btn::-webkit-scrollbar {
   border: 0.2em solid var(--eucalyptus);
@@ -246,14 +255,6 @@ input[type="text"]:focus {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-.form,
-.form--account {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  align-items: center;
 }
 
 .login-container {
@@ -291,7 +292,7 @@ input[type="text"]:focus {
 .form__containers {
   display: flex;
   flex-direction: column;
-  font-size: 0.8rem;
+  font-size: 0.7em;
   text-transform: uppercase;
   margin: 0.5rem;
 }
@@ -300,6 +301,7 @@ input[type="text"]:focus {
   background-color: var(--fontColor);
   color: var(--crail);
   height: 100vh;
+  display: flex; 
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
@@ -313,6 +315,15 @@ input[type="text"]:focus {
   padding: 0.5rem;
 }
 
+.form,
+.form--account {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: center;
+  min-width: 50%
+}
+
 .account-input {
   width: 100%;
   color: var(--crail);
@@ -320,7 +331,7 @@ input[type="text"]:focus {
   border: 2px solid var(--eucalyptus);
   border-radius: 0.2rem;
   padding: 8px;
-  font-size: 0.9rem;
+  font-size: 1.1em;
 }
 
 .button__letsSpeak,
@@ -345,9 +356,10 @@ input[type="text"]:focus {
   border: 2px solid var(--eucalyptus);
   border-radius: 0.2rem;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.7em;
   text-transform: uppercase;
   padding: 0.5rem;
+  font-weight: bold;
 }
 
 .button__update {
@@ -356,6 +368,7 @@ input[type="text"]:focus {
 
 input[name="search"] {
   color: var(--crail);
+  font-size: 1em;
 }
 
 .header__buttons--left {
