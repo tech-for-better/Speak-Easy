@@ -29,7 +29,7 @@ An MVP for Full-stack Tech For Better project by FAC21 built with Supabase as ba
 
 ## Tech Stack 
 
-Design
+* Design & Development
 
 <img src="https://i.imgur.com/fMjGTTb.png" height=100>
 
@@ -39,8 +39,7 @@ Design
 
 <img src="https://i.imgur.com/VufuNlq.png" height=100>
 
-
-Deployed on 
+* Deployment
 
 <img src='./src/assets/netlify.png' height=100>
 
