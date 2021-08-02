@@ -4,9 +4,6 @@ import homeIcon from "../assets/home.png";
 import accountIcon from "../assets/account.png";
 import refreshIcon from "../assets/restart-line.png";
 
-//@TODO: Prevent re-rendering after vocalization
-//@TODO: Filter by search
-
 export default function Header({ tiles, setTiles, setDisplay, fetchTiles }) {
   const [search, setSearch] = useState("");
 
