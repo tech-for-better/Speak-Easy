@@ -21,7 +21,7 @@ An MVP for Full-stack Tech For Better project by FAC21 built with Supabase as ba
 - [🏁 Getting started](#Getting-started)
   - [Database setup](#Database-setup)
 - [📆 Project Timeline](#Project-Timeline)
-- [Reflections and What Next](#Reflections-and-What-Next)
+- [Reflections and What Next](#Reflections-and-What's-Next)
 <!-- - 👨‍🏫 Key takeaways
 - ⏳ Additional Features -->
 
