@@ -45,7 +45,7 @@ An MVP for Full-stack Tech For Better project by FAC21 built with Supabase as ba
 <img src='./src/assets/netlify.png' height=100>
 
 
-Dependencies
+* Dependencies
 
     - supabase
     - react
