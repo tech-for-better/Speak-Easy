@@ -44,7 +44,6 @@ const Board = () => {
       <div className="cards">
         {/* This is where the selected speech content will be displayed. */}
         <DisplayedTiles display={display} vocalizer={vocalizer} speak={speak} />
-        {/* Start */}
         <Tiles
           tiles={tiles}
           display={display}
@@ -59,4 +58,4 @@ const Board = () => {
   );
 };
 
-export default React.memo(Board);
+export default Board;
