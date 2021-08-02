@@ -61,7 +61,7 @@ Dependencies
 
 ## Database Schema 
 
-[UI](./src/assets/Schema.png)
+[UI](./src/assets/Schema-.png)
 
 <img src="./src/assets/Schema.png" width="450px" >
 
