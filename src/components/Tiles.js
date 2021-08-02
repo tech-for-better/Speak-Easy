@@ -43,9 +43,12 @@ export default function Tiles({
           style={{
             width: "20rem",
             height: "20rem",
-            borderRadius: "20%",
+            borderRadius: "50%",
             marginTop: "2rem",
             lineHeight: "2",
+            backgroundColor: "#f84e25",
+            color: "white",
+            fontSize: "1.2em",
           }}
         >
           This pictogram does not exist yet! <br /> Click to try another.
