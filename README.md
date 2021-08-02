@@ -19,8 +19,7 @@ An MVP for Full-stack Tech For Better project by FAC21.
 - [🗄️ Database schema](#Database-Schema)
 - [Features](#Features)
 - [🏁 Getting started](#Getting-started)
-  <!-- - Database setup
-  - REST API Endpoints -->
+  - [Database setup](#Database-setup)
 - [📆 Project Timeline](#Project-Timeline)
 - [Reflections and What Next](#Reflections-and-What-Next)
 <!-- - 👨‍🏫 Key takeaways
@@ -50,10 +49,7 @@ Deployed on
 
 Dependencies
 
-    - @supabase
-    <!-- "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10", -->
+    - supabase
     - react
     - react-dom
     - react-router-dom
@@ -107,19 +103,15 @@ You will also see any lint errors in the console.
 
 ## Database setup
 
-- Create a .env.local file in the root of the project and add the Environment variables provided by Supabase. They can be found in the Project documentation.
+- Create a .env.local file in the root of the project and add the Environment variables provided by Supabase. They can be found in the Project documentation and on Supabase platform under Speak-Easy project, Settings, API.
 
 - To be able to maintain the data in the database you need to sign in the Supabase platform using Speak-Easy Github account. The credentials can be found in the Project documentation.
-
--
-
-
 
 ---
 
 ## 📆 Project Timeline
 
-Admin
+### Admin
 
 Project duration: 28 June to 4 August 2021 with a Showcase on 11 August.
 
@@ -127,36 +119,38 @@ Project duration: 28 June to 4 August 2021 with a Showcase on 11 August.
 - Two 6-day build sprints:
 
 
-🎨 Design process \
+### 🎨 Design process \
 
-- Dicovery and definition workshops on [Miro board]().
-- The initial prototype can be viewed on [Figma]().
-
-
+- Dicovery and definition workshops on [Miro board](https://miro.com/app/board/o9J_l8DTKbM=/?fromRedirect=1).
+- The initial prototype can be viewed on [Figma](https://www.figma.com/file/rVkpg0gwaKI7IaBe2XPOcB/Speak-Easy?node-id=0%3A1).
 
 
-<!-- Through our initial user research, we learnt that ice cream vendors are not keen to have their location shared constantly with customers, so would like to have full control of how visible they are on the map, and this impacted our final MVP design. -->
+
+
 
 🔧 First Build Sprint \
 
-- First focused on building the database and skeleton of the platform.
+- First focused on building skeleton of the platform, connecting the database and rendering the data.
 
+- Setting up the Authentication provided by Supabase
 
-<!-- Initial set up of PostgresQL database
-Set up Travis CI and Husky as part of initial setup
-Deployment of frontend and backend from a monorepo
-Finalized style guide
-Set up React router for for the front-end to serve different pages -->
+- Built functionalities as displaying the selected data and text to voice
+
+- 
 
 
 🔨 Second Build Sprint \
 By the end of the second build sprint, we were able to :
 
-<!-- Create the heatmap for ice cream vendors to view nearby customers who are interested in icecream
-Set up codecov to monitor test coverage on the project
-Add functionality for customers to let ice cream vendors know they would like ice cream
-Include geolocation api tracking for customers -->
+- 
+- 
+- 
 
 ---
 
 ## Reflections and What Next
+
+
+- The remaining tiles need to be imported in the database table `tiles` in the `Table editor` from the folder `tiles` in the bucket `Public` at the `Storage`
+
+- 
