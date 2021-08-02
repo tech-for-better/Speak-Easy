@@ -32,16 +32,21 @@ An MVP for Full-stack Tech For Better project by FAC21 built with Supabase as ba
 * Design & Development
 
 <img src="https://i.imgur.com/fMjGTTb.png" height=100>
+![](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white) 
 
 <img src="https://i.imgur.com/9u3HsWI.png" height=100>
+![](https://img.shields.io/badge/Supabase-181818?style=for-the-badge&logo=supabase&logoColor=white) 
+
 
 <img src='./src/assets/supabase.png' height=100>
 
 <img src="https://i.imgur.com/VufuNlq.png" height=100>
+![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
 * Deployment
 
 <img src='./src/assets/netlify.png' height=100>
+![](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 
 
 Dependencies
