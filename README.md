@@ -15,8 +15,8 @@ An MVP for Full-stack Tech For Better project by FAC21 built with Supabase as ba
 
 - [Project overview](#Project-overview)
 - [Developers](#Developers)
-- [Tech Stack](#Tech-Stack)
-- [🗄️ Database schema](#Database-Schema)
+- [Tech Stack](#Tech-Stack-:pancakes:)
+- [Database schema](#Database-schema)
 - [Features](#Features)
 - [🏁 Getting started](#Getting-started)
   - [Database setup](#Database-setup)
@@ -47,12 +47,15 @@ Deployed on
 
 Dependencies
 
+    - supabase
     - react
     - react-dom
     - react-router-dom
+    - react-scripts
     - react-speech-kit
     - react-supabase
     - uniqid
+    - web-vitals
 
 ---
 
