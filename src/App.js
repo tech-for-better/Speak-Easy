@@ -25,7 +25,6 @@ const App = () => {
     
   }, []);
 
-  console.log(session);
 
   return (
     <>

@@ -4,16 +4,11 @@ import homeIcon from "../assets/home.png";
 import accountIcon from "../assets/account.png";
 import refreshIcon from "../assets/restart-line.png";
 
-//@TODO: Prevent re-rendering after vocalization
-//@TODO: Filter by search
-
 export default function Header({ tiles, setTiles, setDisplay, fetchTiles }) {
   const [search, setSearch] = useState("");
-  console.log("search", search);
 
   const HandleChange = (event) => {
     const { value } = event.target;
-    console.log(value);
     setSearch(value);
   };
 
@@ -22,9 +17,9 @@ export default function Header({ tiles, setTiles, setDisplay, fetchTiles }) {
   };
 
   const HandleClick = () => {
+    setTimeout(() => fetchTiles() && setSearch(""), 3000);
     const tile = tiles.filter((item) => item.name === search);
     setTiles(tile);
-    setSearch("");
   };
 
   const handleRefreshClick = () => {
@@ -32,8 +27,6 @@ export default function Header({ tiles, setTiles, setDisplay, fetchTiles }) {
     fetchTiles();
     setSearch("");
   };
-
-  console.log("tiles", tiles);
 
   return (
     <>

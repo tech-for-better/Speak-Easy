@@ -1,7 +1,5 @@
 import React from "react";
 
-//@TODO when search result is deleted update. // User interaction // Bug fix
-
 const DisplayedTiles = ({ display, speak, vocalizer } = {}) => {
   const scrollContainer = {
     overflowX: "scroll",
