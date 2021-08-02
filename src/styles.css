@@ -11,7 +11,6 @@
   box-sizing: border-box;
 }
 
-
 html,
 body {
   font-family: var(--font);
@@ -228,7 +227,6 @@ input[type="text"]:focus {
   border: 0.2rem solid var(--eucalyptus);
 }
 
-
 /* .btn--scroll  */
 .btn::-webkit-scrollbar {
   border: 0.2em solid var(--eucalyptus);
@@ -300,7 +298,7 @@ input[type="text"]:focus {
   background-color: var(--fontColor);
   color: var(--crail);
   height: 100vh;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
@@ -320,7 +318,7 @@ input[type="text"]:focus {
   flex-direction: column;
   gap: 0.25rem;
   align-items: center;
-  min-width: 50%
+  min-width: 50%;
 }
 
 .account-input {

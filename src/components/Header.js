@@ -17,7 +17,7 @@ export default function Header({ tiles, setTiles, setDisplay, fetchTiles }) {
   };
 
   const HandleClick = () => {
-    setTimeout(() => fetchTiles() && setSearch(""), 3000);
+    // setTimeout(() => fetchTiles() && setSearch(""), 3000);
     const tile = tiles.filter((item) => item.name === search);
     setTiles(tile);
   };
