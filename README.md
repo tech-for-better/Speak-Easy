@@ -15,7 +15,7 @@ An MVP for Full-stack Tech For Better project by FAC21 built with Supabase as ba
 
 - [Project overview](#Project-overview)
 - [Developers](#Developers)
-- [Tech Stack](#Tech-stack)
+- [Tech Stack](#Tech-Stack :pancakes:)
 - [🗄️ Database schema](#Database-schema)
 - [Features](#Features)
 - [🏁 Getting started](#Getting-started)
@@ -59,7 +59,7 @@ Dependencies
 
 ---
 
-## Database Schema [UI](./src/assets/Schema.png)
+## 🗄️ Database Schema [UI](./src/assets/Schema.png)
 
 <img src="./src/assets/Schema.png" width="450px" >
 
