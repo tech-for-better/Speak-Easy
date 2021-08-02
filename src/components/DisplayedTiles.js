@@ -1,23 +1,44 @@
 import React from "react";
 
-const DisplayedTiles = ({ display, speak, vocalizer }) => {
+//@TODO when search result is deleted update. // User interaction // Bug fix
+
+const DisplayedTiles = ({ display, speak, vocalizer } = {}) => {
+  const scrollContainer = {
+    overflowX: "scroll",
+    border: "",
+    marginBottom: "20px",
+  };
+  const wrapperScrollStyle = {
+    display: "flex",
+    flexWrap: "nowrap",
+    border: "",
+  };
+
+  const imgScrollStyle = {
+    width: "10rem",
+    height: "auto",
+    flex: "0 0 auto",
+  };
+
   return (
-    <>
-      <button
-        className="btn cards--output"
-        aria-label="Vocalize selected pictograms"
-        onClick={() => speak({ text: vocalizer })}
-      >
+    <div
+      className="btn cards--output"
+      aria-label="Vocalize selected pictograms"
+      onClick={() => speak({ text: vocalizer })}
+      style={scrollContainer}
+    >
+      <div className="wrapper" style={wrapperScrollStyle}>
         {display.map((tile) => (
           <img
+            className="wrapper--img"
             key={tile.uniqId}
             src={tile.image}
             alt="card url"
-            className="selectedTile"
+            style={imgScrollStyle}
           />
         ))}
-      </button>
-    </>
+      </div>
+    </div>
   );
 };
 
