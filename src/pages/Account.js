@@ -95,7 +95,6 @@ export default function Account({ session, setSession }) {
           <button
             className="button__signOut"
             onClick={() => {
-              console.log("clicked");
               client.auth.signOut();
             }}
           >

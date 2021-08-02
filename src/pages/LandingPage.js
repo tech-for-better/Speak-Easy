@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const LandingPage = (props) => {
-  console.log(props);
-
+  console.log("props", props);
   return (
     <main className="landingPage">
       <hgroup className="landingPage--container">
