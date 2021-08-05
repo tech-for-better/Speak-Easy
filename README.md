@@ -73,11 +73,11 @@ What can you do?
 
 - You can sign up as a user typing your email address, clicking on the Magick Link and following the link provided in the email received from Supabase.
 
-- 
+- You can add an Avatar, your name and website on the Account page.
 
-- 
+- You can create sentences clicking the tiles on the board page and vocalize them clicking on the sentence container.
 
-- 
+- You can sign out clicking the button on the Account page.
 
 ---
 
@@ -136,15 +136,15 @@ Project duration: 28 June to 4 August 2021 with a Showcase on 11 August.
 
 - Built functionalities as displaying the selected data and text to voice
 
-- 
+- Added the data in Supabase storage and populated the Tiles table.
 
 
 🔨 Second Build Sprint \
 By the end of the second build sprint, we were able to :
 
-- 
-- 
-- 
+- Take care of responcivnes and accesibility
+- Add functionality as Search, Refresh and Horisontal Scroll 
+- Deploy the App on Netlify and add a custom domain
 
 ---
 
@@ -153,4 +153,4 @@ By the end of the second build sprint, we were able to :
 
 - The remaining tiles need to be imported in the database table `tiles` in the `Table editor` from the folder `tiles` in the bucket `Public` at the `Storage`
 
-- 
+- Fitures as predictivity and adding custom tiles can be created
